@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TextUnit : MonoBehaviour {
     public string Key;
+    public TextUnit NextUnit;
+    public Requirement NextUnitReq;
+    public float Delay;
+    public bool PlayerSide;
     [Space]
     public List<TextBlock> Blocks;
     public List<Choice> Choices;
@@ -52,6 +56,8 @@ public class TextUnit : MonoBehaviour {
 
     public Choice GetChoice(int Index)
     {
+        if (GetChoices().Count <= Index)
+            return null;
         return GetChoices()[Index];
     }
 
@@ -66,5 +72,12 @@ public class TextUnit : MonoBehaviour {
         Changes = new List<VariableChange>();
         foreach (VariableChange VC in GetComponentsInChildren<VariableChange>())
             Changes.Add(VC);
+    }
+
+    public TextUnit GetNextUnit()
+    {
+        if (NextUnitReq && !NextUnitReq.Pass())
+            return null;
+        return NextUnit;
     }
 }
