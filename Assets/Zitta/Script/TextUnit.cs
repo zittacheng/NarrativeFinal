@@ -6,7 +6,7 @@ public class TextUnit : MonoBehaviour {
     public string Key;
     public TextUnit NextUnit;
     public Requirement NextUnitReq;
-    public float Delay;
+    public float AddDelay;
     public float AddReadDelay;
     public bool PlayerSide;
     [Space]
@@ -15,12 +15,11 @@ public class TextUnit : MonoBehaviour {
     [HideInInspector] public string FinalText;
     [HideInInspector] public List<Choice> FinalChoices;
     [HideInInspector] public bool Loading;
-    public int LoadIndex;
-    public int RealIndex;
+    [HideInInspector] public int LoadIndex;
+    [HideInInspector] public int RealIndex;
     [HideInInspector] public float CurrentDelay;
-    [Space]
-    public List<string> Commands;
-    public List<Vector2Int> CommandRanges;
+    [HideInInspector] public List<string> Commands;
+    [HideInInspector] public List<Vector2Int> CommandRanges;
     [Space]
     public List<VariableChange> Changes;
 
@@ -51,7 +50,7 @@ public class TextUnit : MonoBehaviour {
     public void OnLoad()
     {
         Loading = true;
-        LoadIndex = 0;
+        LoadIndex = -1;
         FinalText = "";
         FinalChoices = new List<Choice>();
         foreach (TextBlock TB in Blocks)
@@ -62,7 +61,7 @@ public class TextUnit : MonoBehaviour {
                 FinalChoices.Add(C);
         foreach (VariableChange VC in Changes)
             VC.Process();
-        CurrentDelay = GetReadDelay();
+        CurrentDelay = GetDelay() * 0.25f;
         CommandCheck();
         IndexCheck();
     }
@@ -90,6 +89,8 @@ public class TextUnit : MonoBehaviour {
 
     public void IndexCheck()
     {
+        if (LoadIndex < 0)
+            return;
         for (int i = CommandRanges.Count - 1; i >= 0; i--)
         {
             if (LoadIndex == CommandRanges[i].x)
@@ -175,6 +176,11 @@ public class TextUnit : MonoBehaviour {
         if (NextUnitReq && !NextUnitReq.Pass())
             return null;
         return NextUnit;
+    }
+
+    public float GetDelay()
+    {
+        return TextControl.Main.DefaultDelay + AddDelay;
     }
 
     public float GetReadDelay()

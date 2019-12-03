@@ -13,7 +13,10 @@ public class TextControl : MonoBehaviour {
     [Space]
     public List<TextUnit> Units;
     public TextUnit StartUnit;
+    public float DefaultDelay;
     public float ReadDelay;
+    [Space]
+    public Animator ChoiceBarAnim;
 
     public void Awake()
     {
@@ -39,6 +42,9 @@ public class TextControl : MonoBehaviour {
             else if (GetCurrentUnit().GetChoices().Count > 0)
                 ChoiceActive = true;
         }
+
+        if (ChoiceBarAnim)
+            ChoiceBarAnim.SetBool("Active", HaveChoice());
     }
 
     public void LoadUnit(TextUnit TU)
@@ -49,7 +55,7 @@ public class TextControl : MonoBehaviour {
         ChoiceActive = false;
         CurrentUnit = TU;
         NextUnit = TU.GetNextUnit();
-        CurrentDelay = TU.Delay;
+        CurrentDelay = TU.GetDelay();
         PastUnits.Add(TU);
     }
 
