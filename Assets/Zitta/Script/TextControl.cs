@@ -13,6 +13,7 @@ public class TextControl : MonoBehaviour {
     [Space]
     public List<TextUnit> Units;
     public TextUnit StartUnit;
+    public float ReadDelay;
 
     public void Awake()
     {
@@ -29,7 +30,8 @@ public class TextControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        CurrentDelay -= Time.deltaTime;
+        if (!GetCurrentUnit() || !GetCurrentUnit().Loading)
+            CurrentDelay -= Time.deltaTime;
         if (CurrentDelay <= 0 && !HaveChoice() && GetCurrentUnit())
         {
             if (GetCurrentUnit().GetNextUnit())
@@ -91,7 +93,7 @@ public class TextControl : MonoBehaviour {
         }
         TextUnit TU = PastUnits[a];
         PlayerSide = TU.PlayerSide;
-        return TU.FinalText;
+        return TU.GetText();
     }
 
     //也很重要

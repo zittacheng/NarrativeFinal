@@ -19,6 +19,7 @@ public class TextRenderer : MonoBehaviour {
         TEXT.text = TextControl.Main.GetText(Index, out bool PlayerSide);
         if (TEXT.text == "")
             return;
+        /*
         if (PlayerSide)
         {
             TEXT.alignment = TextAlignmentOptions.MidlineRight;
@@ -28,6 +29,6 @@ public class TextRenderer : MonoBehaviour {
         {
             TEXT.alignment = TextAlignmentOptions.MidlineLeft;
             TEXT.text = "- " + TEXT.text;
-        }
+        }*/
     }
 }
