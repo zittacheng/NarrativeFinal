@@ -18,7 +18,7 @@ public class ChoiceRenderer : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (TextControl.Main.GetCurrentUnit() && TextControl.Main.GetCurrentUnit().GetChoices().Count > Index)
+        if (TextControl.Main.HaveChoice() && TextControl.Main.GetCurrentUnit())
             TargetChoice = TextControl.Main.GetCurrentUnit().GetChoice(Index);
         else
             TargetChoice = null;
@@ -33,6 +33,6 @@ public class ChoiceRenderer : MonoBehaviour {
     {
         if (!TargetChoice)
             return;
-        TextControl.Main.Choose(TargetChoice);
+        TextControl.Main.Choose(Index);
     }
 }
