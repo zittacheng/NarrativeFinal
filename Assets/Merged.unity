@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Content: "Congratulations,*D10* sir.*D30* You\u2019ve passed the routine cognition
+  Content: "Congratulations,*D10* captain.*D30* You\u2019ve passed the routine cognition
     check."
   Req: {fileID: 0}
 --- !u!114 &166128458
@@ -1561,7 +1561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Content: Good Morning, Captain. *D50*8 Earth hours have*n*passed since our departure.
+  Content: Good Morning,*D10* Captain. *D50*8 Earth hours have*n*passed since our
+    departure.
   Req: {fileID: 0}
 --- !u!114 &423869423
 MonoBehaviour:
@@ -6181,7 +6182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Content: Sir, Neptune 4 is a terrestrial planet.
+  Content: Captain,*D10* Neptune 4 is a terrestrial planet.
   Req: {fileID: 0}
 --- !u!114 &1680993848
 MonoBehaviour:
