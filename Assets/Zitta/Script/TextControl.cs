@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TextControl : MonoBehaviour {
     [HideInInspector]
@@ -9,6 +10,7 @@ public class TextControl : MonoBehaviour {
     public TextUnit NextUnit;
     public float CurrentDelay;
     public bool ChoiceActive;
+    public bool NextActive;
     public List<TextUnit> PastUnits;
     [Space]
     public List<TextUnit> Units;
@@ -17,6 +19,7 @@ public class TextControl : MonoBehaviour {
     public float ReadDelay;
     [Space]
     public Animator ChoiceBarAnim;
+    public TMP_FontAsset DefaultFont;
 
     public void Awake()
     {
@@ -38,7 +41,12 @@ public class TextControl : MonoBehaviour {
         if (CurrentDelay <= 0 && !HaveChoice() && GetCurrentUnit())
         {
             if (GetCurrentUnit().GetNextUnit())
-                LoadUnit(GetCurrentUnit().GetNextUnit());
+            {
+                if (GetCurrentUnit().AutoNext)
+                    LoadUnit(GetCurrentUnit().GetNextUnit());
+                else
+                    NextActive = true;
+            }
             else if (GetCurrentUnit().GetChoices().Count > 0)
                 ChoiceActive = true;
         }
@@ -52,6 +60,7 @@ public class TextControl : MonoBehaviour {
         if (!TU)
             return;
         TU.OnLoad();
+        NextActive = false;
         ChoiceActive = false;
         CurrentUnit = TU;
         NextUnit = TU.GetNextUnit();
@@ -84,13 +93,9 @@ public class TextControl : MonoBehaviour {
         LoadUnit(C.GetTarget());
     }
 
-    //很重要
-    //Return第Index项对话内容
-    //(当前对话Index为0，上一个对话Index为1，再上一个Index为2...)
-    //(输出的Bool代表是否Return的对话是玩家角色说出的)
-    //
-    public string GetText(int Index, out bool PlayerSide)
+    public string GetText(int Index, out bool PlayerSide, out bool AlterFont)
     {
+        AlterFont = false;
         int a = PastUnits.Count - 1 - Index;
         if (a < 0)
         {
@@ -99,20 +104,15 @@ public class TextControl : MonoBehaviour {
         }
         TextUnit TU = PastUnits[a];
         PlayerSide = TU.PlayerSide;
+        AlterFont = TU.AlterFont;
         return TU.GetText();
     }
 
-    //也很重要
-    //Return当前是否需要玩家选择对话选项
-    //
     public bool HaveChoice()
     {
         return ChoiceActive;
     }
 
-    //同样重要
-    //Return第Index项对话选项里的字符串
-    //
     public string GetChoice(int Index)
     {
         if (HaveChoice() && GetCurrentUnit().GetChoice(Index))
@@ -121,11 +121,29 @@ public class TextControl : MonoBehaviour {
             return "";
     }
 
-    //也同样重要
-    //选择第Index项对话选项
-    //
     public void Choose(int Index)
     {
         ChooseChoice(GetCurrentUnit().GetChoice(Index));
+    }
+
+    public void NextButtonProccess()
+    {
+        if (GetCurrentUnit() && GetCurrentUnit().GetNextUnit())
+            LoadUnit(GetCurrentUnit().GetNextUnit());
+    }
+
+    public bool NextButtonActive()
+    {
+        return NextActive;
+    }
+
+    public void TriggerText(string Value)
+    {
+
+    }
+
+    public void TakeOff()
+    {
+
     }
 }
