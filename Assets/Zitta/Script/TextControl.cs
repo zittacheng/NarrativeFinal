@@ -8,6 +8,8 @@ public class TextControl : MonoBehaviour {
     public static TextControl Main;
     public TextUnit CurrentUnit;
     public TextUnit NextUnit;
+    public TextUnit AIUnit;
+    public TextUnit PlayerUnit;
     public float CurrentDelay;
     public bool ChoiceActive;
     public bool NextActive;
@@ -19,7 +21,8 @@ public class TextControl : MonoBehaviour {
     public float ReadDelay;
     [Space]
     public Animator ChoiceBarAnim;
-    public TMP_FontAsset DefaultFont;
+    public Animator PlayerAnim;
+    public Animator AIAnim;
 
     public void Awake()
     {
@@ -37,7 +40,24 @@ public class TextControl : MonoBehaviour {
     void Update()
     {
         if (!GetCurrentUnit() || !GetCurrentUnit().Loading)
+        {
             CurrentDelay -= Time.deltaTime;
+            PlayerAnim.SetBool("Active", false);
+            AIAnim.SetBool("Active", false);
+        }
+        else
+        {
+            if (GetCurrentUnit().UType == UnitType.AI)
+            {
+                PlayerAnim.SetBool("Active", false);
+                AIAnim.SetBool("Active", true);
+            }
+            else if (GetCurrentUnit().UType == UnitType.Player)
+            {
+                PlayerAnim.SetBool("Active", true);
+                AIAnim.SetBool("Active", false);
+            }
+        }
         if (CurrentDelay <= 0 && !HaveChoice() && GetCurrentUnit())
         {
             if (GetCurrentUnit().GetNextUnit())
@@ -59,6 +79,7 @@ public class TextControl : MonoBehaviour {
     {
         if (!TU)
             return;
+
         TU.OnLoad();
         NextActive = false;
         ChoiceActive = false;
@@ -66,6 +87,14 @@ public class TextControl : MonoBehaviour {
         NextUnit = TU.GetNextUnit();
         CurrentDelay = TU.GetDelay();
         PastUnits.Add(TU);
+
+        if (TU.UType == UnitType.Player)
+            PlayerUnit = TU;
+        else
+        {
+            AIUnit = TU;
+            PlayerUnit = null;
+        }
     }
 
     public TextUnit GetUnit(string Key)
@@ -81,6 +110,15 @@ public class TextControl : MonoBehaviour {
         return CurrentUnit;
     }
 
+    public TextUnit GetUnit(UnitType TargetType)
+    {
+        if (TargetType == UnitType.AI)
+            return AIUnit;
+        else if (TargetType == UnitType.Player)
+            return PlayerUnit;
+        return null;
+    }
+
     public void EditorAssign()
     {
         Units = new List<TextUnit>();
@@ -93,17 +131,12 @@ public class TextControl : MonoBehaviour {
         LoadUnit(C.GetTarget());
     }
 
-    public string GetText(int Index, out bool PlayerSide, out bool AlterFont)
+    public string GetText(UnitType TargetType, out bool AlterFont)
     {
         AlterFont = false;
-        int a = PastUnits.Count - 1 - Index;
-        if (a < 0)
-        {
-            PlayerSide = false;
+        if (!GetUnit(TargetType))
             return "";
-        }
-        TextUnit TU = PastUnits[a];
-        PlayerSide = TU.PlayerSide;
+        TextUnit TU = GetUnit(TargetType);
         AlterFont = TU.AlterFont;
         return TU.GetText();
     }
@@ -137,13 +170,8 @@ public class TextControl : MonoBehaviour {
         return NextActive;
     }
 
-    public void TriggerText(string Value)
+    public bool PlayerUnitActive()
     {
-
-    }
-
-    public void TakeOff()
-    {
-
+        return PlayerUnit;
     }
 }

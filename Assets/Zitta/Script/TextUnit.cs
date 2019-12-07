@@ -7,9 +7,9 @@ public class TextUnit : MonoBehaviour {
     public string Key;
     public TextUnit NextUnit;
     public Requirement NextUnitReq;
+    public UnitType UType;
     public float AddDelay;
     public float AddReadDelay;
-    public bool PlayerSide;
     public bool AutoNext;
     public bool AlterFont;
     [Space]
@@ -196,4 +196,10 @@ public class TextUnit : MonoBehaviour {
     {
         return TextControl.Main.ReadDelay + AddReadDelay;
     }
+}
+
+public enum UnitType
+{
+    AI,
+    Player,
 }
