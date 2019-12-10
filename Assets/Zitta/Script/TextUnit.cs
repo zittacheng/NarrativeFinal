@@ -10,6 +10,7 @@ public class TextUnit : MonoBehaviour {
     public UnitType UType;
     public float AddDelay;
     public float AddReadDelay;
+    public bool StartUnit;
     public bool AutoNext;
     public bool EventMode;
     public bool AlterFont;
@@ -29,6 +30,12 @@ public class TextUnit : MonoBehaviour {
     [Space]
     public List<VariableChange> Changes;
     public List<UnitEffect> Effects;
+
+    public void Awake()
+    {
+        if (StartUnit)
+            TextControl.Main.StartUnit = this;
+    }
 
     // Start is called before the first frame update
     void Start()
