@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MapDotController : MonoBehaviour
 {
@@ -8,11 +9,12 @@ public class MapDotController : MonoBehaviour
     public Animator animator;
     public string AnimationBoolName;
     public string PlanetName;
+    private TextMeshPro PlanetNameDisplay;
    // public string AnimationTriggerName;
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlanetNameDisplay = GameObject.Find("PlanetName").GetComponent<TextMeshPro>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class MapDotController : MonoBehaviour
         else if (MapController.CurrentSelectLocationCode == MapDotCode)
         {
             animator.SetBool("Select", true);
+
             //InventoryDetail.SetActive(true);
         }
         else if (MapController.CurrentSelectLocationCode != MapDotCode)
@@ -58,10 +61,11 @@ public class MapDotController : MonoBehaviour
 
             MapController.CurrentSelectLocationCode = MapDotCode;
             animator.SetBool("Select", true);
+
             //selected = true;
             //InventorySelectControl.OtherSelectedBox++;
             //InventoryDetail.SetActive(true);
-
+            PlanetNameDisplay.text = PlanetName;
 
             //deselect other boxes;
         }
@@ -69,6 +73,7 @@ public class MapDotController : MonoBehaviour
         else if (MapController.CurrentSelectLocationCode == MapDotCode && MapController.CurrentLocationCode != MapDotCode)
         {
             animator.SetBool("Select", false);
+            PlanetNameDisplay.text = " ";
             //selected = false;
             MapController.CurrentSelectLocationCode = 0;
            // InventoryDetail.SetActive(false);
