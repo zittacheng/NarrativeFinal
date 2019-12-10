@@ -1,19 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TextUnit : MonoBehaviour {
     public string Key;
     public TextUnit NextUnit;
     public Requirement NextUnitReq;
+    public UnitType UType;
     public float AddDelay;
     public float AddReadDelay;
-    public bool PlayerSide;
+    public bool AutoNext;
+    public bool EventMode;
+    public bool AlterFont;
     [Space]
     public List<TextBlock> Blocks;
     public List<Choice> Choices;
+    public List<EventChoice> EventChoices;
     [HideInInspector] public string FinalText;
     [HideInInspector] public List<Choice> FinalChoices;
+    [HideInInspector] public List<EventChoice> FinalEventChoices;
     [HideInInspector] public bool Loading;
     [HideInInspector] public int LoadIndex;
     [HideInInspector] public int RealIndex;
@@ -22,6 +28,7 @@ public class TextUnit : MonoBehaviour {
     [HideInInspector] public List<Vector2Int> CommandRanges;
     [Space]
     public List<VariableChange> Changes;
+    public List<UnitEffect> Effects;
 
     // Start is called before the first frame update
     void Start()
@@ -53,17 +60,23 @@ public class TextUnit : MonoBehaviour {
         LoadIndex = -1;
         FinalText = "";
         FinalChoices = new List<Choice>();
+        FinalEventChoices = new List<EventChoice>();
         foreach (TextBlock TB in Blocks)
             if (TB.Active())
                 FinalText += TB.Content;
         foreach (Choice C in Choices)
             if (C.Active())
                 FinalChoices.Add(C);
+        foreach (EventChoice EC in EventChoices)
+            if (EC.Active())
+                FinalEventChoices.Add(EC);
         foreach (VariableChange VC in Changes)
             VC.Process();
         CurrentDelay = GetDelay() * 0.25f;
         CommandCheck();
         IndexCheck();
+        foreach (UnitEffect UE in Effects)
+            UE.Effect();
     }
 
     public void CommandCheck()
@@ -158,6 +171,21 @@ public class TextUnit : MonoBehaviour {
         return GetChoices()[Index];
     }
 
+    public List<EventChoice> GetEventChoices()
+    {
+        return FinalEventChoices;
+    }
+
+    public EventChoice GetEventChoice(string Key)
+    {
+        for (int i = GetEventChoices().Count - 1; i >= 0; i--)
+        {
+            if (GetEventChoices()[i].Key == Key)
+                return GetEventChoices()[i];
+        }
+        return null;
+    }
+
     public void EditorAssign()
     {
         Blocks = new List<TextBlock>();
@@ -169,6 +197,12 @@ public class TextUnit : MonoBehaviour {
         Changes = new List<VariableChange>();
         foreach (VariableChange VC in GetComponentsInChildren<VariableChange>())
             Changes.Add(VC);
+        Effects = new List<UnitEffect>();
+        foreach (UnitEffect UE in GetComponentsInChildren<UnitEffect>())
+            Effects.Add(UE);
+        EventChoices = new List<EventChoice>();
+        foreach (EventChoice EC in GetComponentsInChildren<EventChoice>())
+            EventChoices.Add(EC);
     }
 
     public TextUnit GetNextUnit()
@@ -187,4 +221,10 @@ public class TextUnit : MonoBehaviour {
     {
         return TextControl.Main.ReadDelay + AddReadDelay;
     }
+}
+
+public enum UnitType
+{
+    AI,
+    Player,
 }

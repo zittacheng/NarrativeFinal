@@ -250,7 +250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &84894234
 RectTransform:
   m_ObjectHideFlags: 0
@@ -334,7 +334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420, y: 0.000030517578}
+  m_AnchoredPosition: {x: -190, y: 0}
   m_SizeDelta: {x: 207.2, y: 78.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &91668049
@@ -348,8 +348,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 180, y: 63.5, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 603.2132, y: 63.50002, z: 1}
+  m_Center: {x: -211.60658, y: 0, z: 0}
 --- !u!114 &91668050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +365,235 @@ MonoBehaviour:
   TEXT: {fileID: 911474858}
   Index: 0
   TargetChoice: {fileID: 0}
+--- !u!1 &172700751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172700752}
+  - component: {fileID: 172700754}
+  - component: {fileID: 172700753}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172700752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172700751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &172700753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172700751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "Back to Neptune 4,*D50* I\u2019ve updated its information in our route
+    and logged the latest information I could get from the ACGX database."
+  Req: {fileID: 0}
+--- !u!114 &172700754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172700751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 486632412}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 172700753}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &191723322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191723323}
+  - component: {fileID: 191723325}
+  - component: {fileID: 191723324}
+  m_Layer: 0
+  m_Name: Congra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &191723323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191723322}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &191723324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191723322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "Congratulations,*D10* sir.*D30* You\u2019ve passed the routine cognition
+    check."
+  Req: {fileID: 0}
+--- !u!114 &191723325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191723322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 172700754}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 191723324}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &195370501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195370502}
+  - component: {fileID: 195370504}
+  - component: {fileID: 195370503}
+  m_Layer: 5
+  m_Name: Next
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &195370502
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195370501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_Children: []
+  m_Father: {fileID: 495974795}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 35}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &195370503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195370501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.26666668, g: 0.27058825, b: 0.16078432, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c4426d7d679a55741aeab388ccac3390, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &195370504
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195370501}
+  m_CullTransparentMesh: 0
 --- !u!1 &196259591
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,8 +651,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d1842859d301ed4394a79b48cb6124d, type: 2}
-  m_sharedMaterial: {fileID: 1120007766419340120, guid: 8d1842859d301ed4394a79b48cb6124d,
+  m_fontAsset: {fileID: 11400000, guid: 90923031da9761740873a00c409a0b4f, type: 2}
+  m_sharedMaterial: {fileID: -3935127701476608187, guid: 90923031da9761740873a00c409a0b4f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -737,6 +966,84 @@ MonoBehaviour:
   Target: 
   TargetUnit: {fileID: 1497032128}
   Req: {fileID: 0}
+--- !u!1 &266051274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 266051275}
+  - component: {fileID: 266051277}
+  - component: {fileID: 266051276}
+  m_Layer: 0
+  m_Name: BeAware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &266051275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266051274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266051276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266051274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "Be aware that you may experience slight nausea caused by the exchange
+    from simulated gravity to Neptune 4\u2019s gravity."
+  Req: {fileID: 0}
+--- !u!114 &266051277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266051274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 595618833}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 266051276}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &273351582
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +1212,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 323540491}
   Choices:
@@ -1221,6 +1529,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 353448065}
   Choices: []
@@ -1297,6 +1606,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 378173055}
   Choices: []
@@ -1448,6 +1758,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 421355227}
   Choices: []
@@ -1514,6 +1825,131 @@ RectTransform:
   m_AnchoredPosition: {x: -68.4, y: -28.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &470949312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470949313}
+  - component: {fileID: 470949314}
+  m_Layer: 0
+  m_Name: Earth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470949313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470949312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 796105198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470949314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470949312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c0bf73a887bd468debb7decacc4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Earth, huh?
+  Target: 
+  TargetUnit: {fileID: 1335210660}
+  Req: {fileID: 0}
+--- !u!1 &486632409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486632410}
+  - component: {fileID: 486632412}
+  - component: {fileID: 486632411}
+  m_Layer: 0
+  m_Name: TakeALook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486632410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486632409}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486632411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486632409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: You can take a look after you finished your breakfast. *D50*Or I can brief
+    you during the shower and breakfast.
+  Req: {fileID: 0}
+--- !u!114 &486632412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486632409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 0}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 486632411}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &494140316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +2139,7 @@ RectTransform:
   - {fileID: 2077597465}
   - {fileID: 84894234}
   - {fileID: 1556145479}
+  - {fileID: 195370502}
   m_Father: {fileID: 199288262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1775,8 +2212,88 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 504846933}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &518622121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518622122}
+  - component: {fileID: 518622124}
+  - component: {fileID: 518622123}
+  m_Layer: 0
+  m_Name: Air
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518622122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518622121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518622123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518622121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: As the past USEA records indicate,*D15* the air on Neptune 4 is chemically
+    unstable. However, the ship is well-equipped to prevent any structural damage.
+    Although,  I would definitely advise against stepping outside the ship.
+  Req: {fileID: 0}
+--- !u!114 &518622124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518622121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1086598513}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 518622123}
   Choices: []
   FinalText: 
   FinalChoices: []
@@ -1830,6 +2347,7 @@ MonoBehaviour:
   NextUnit: {fileID: 0}
   CurrentDelay: 0
   ChoiceActive: 0
+  NextActive: 0
   PastUnits: []
   Units:
   - {fileID: 1413820805}
@@ -1844,7 +2362,7 @@ MonoBehaviour:
   - {fileID: 421355228}
   - {fileID: 1045974322}
   - {fileID: 763281687}
-  StartUnit: {fileID: 1413820805}
+  StartUnit: {fileID: 2093166045}
   DefaultDelay: 0.8
   ReadDelay: 0.028
   ChoiceBarAnim: {fileID: 199288263}
@@ -1907,6 +2425,164 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &565549126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565549127}
+  - component: {fileID: 565549129}
+  - component: {fileID: 565549128}
+  m_Layer: 5
+  m_Name: Next
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &565549127
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565549126}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2091308901}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 35}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565549128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565549126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.26666668, g: 0.27058825, b: 0.16078432, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c4426d7d679a55741aeab388ccac3390, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &565549129
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565549126}
+  m_CullTransparentMesh: 0
+--- !u!1 &575436188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575436189}
+  - component: {fileID: 575436190}
+  - component: {fileID: 575436191}
+  - component: {fileID: 575436192}
+  m_Layer: 5
+  m_Name: NextButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &575436189
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575436188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2091308901}
+  m_Father: {fileID: 619955487}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -101.1, y: 222.5}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &575436190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575436188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbb3b8e47a7f774c9fd937e088ecd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 565549128}
+  Col: {fileID: 575436191}
+--- !u!65 &575436191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575436188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 36, y: 36, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &575436192
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575436188}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f00d6bc616524e41b062000fc14c2e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &581861544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2715,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TEXT: {fileID: 1580394669}
   Index: 0
+--- !u!1 &595618830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595618831}
+  - component: {fileID: 595618833}
+  - component: {fileID: 595618832}
+  m_Layer: 0
+  m_Name: InCase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595618831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595618830}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595618832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595618830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "If you haven\u2019t noticed yet,*D15* I\u2019ve taken the liberty to slowly
+    tweak simulated gravity to better mimic Neptune 4\u2019s gravity in my record.
+    After all, it is almost identical compared to Earth\u2019s gravity."
+  Req: {fileID: 0}
+--- !u!114 &595618833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595618830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1176340445}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 595618832}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &604390346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2861,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 604390348}
   Choices:
@@ -2215,6 +2971,7 @@ RectTransform:
   - {fileID: 443480693}
   - {fileID: 585302518}
   - {fileID: 1132301060}
+  - {fileID: 575436189}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2269,6 +3026,53 @@ MonoBehaviour:
   Content: 
   Target: 
   TargetUnit: {fileID: 1497032128}
+  Req: {fileID: 0}
+--- !u!1 &636062226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636062227}
+  - component: {fileID: 636062228}
+  m_Layer: 0
+  m_Name: 10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &636062227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636062226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1252766653}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636062228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636062226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c0bf73a887bd468debb7decacc4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: About 10 years
+  Target: 
+  TargetUnit: {fileID: 1249223513}
   Req: {fileID: 0}
 --- !u!1 &654026489
 GameObject:
@@ -2334,6 +3138,7 @@ MonoBehaviour:
   AddDelay: 1
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 654026491}
   Choices: []
@@ -2403,8 +3208,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d1842859d301ed4394a79b48cb6124d, type: 2}
-  m_sharedMaterial: {fileID: 1120007766419340120, guid: 8d1842859d301ed4394a79b48cb6124d,
+  m_fontAsset: {fileID: 11400000, guid: 90923031da9761740873a00c409a0b4f, type: 2}
+  m_sharedMaterial: {fileID: -3935127701476608187, guid: 90923031da9761740873a00c409a0b4f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2437,7 +3242,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -2974,6 +3779,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 763281686}
   Choices: []
@@ -3043,8 +3849,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice4
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d1842859d301ed4394a79b48cb6124d, type: 2}
-  m_sharedMaterial: {fileID: 1120007766419340120, guid: 8d1842859d301ed4394a79b48cb6124d,
+  m_fontAsset: {fileID: 11400000, guid: 90923031da9761740873a00c409a0b4f, type: 2}
+  m_sharedMaterial: {fileID: -3935127701476608187, guid: 90923031da9761740873a00c409a0b4f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3210,6 +4016,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 795592623}
   Choices:
@@ -3217,6 +4024,165 @@ MonoBehaviour:
   - {fileID: 984626289}
   - {fileID: 1699501475}
   - {fileID: 2002486821}
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &796105197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 796105198}
+  - component: {fileID: 796105200}
+  - component: {fileID: 796105199}
+  m_Layer: 0
+  m_Name: Cycle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &796105198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796105197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 470949313}
+  - {fileID: 1014533253}
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &796105199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796105197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Therefore, *D15*I have changed the system clock to the day and night cycle
+    of this planet.
+  Req: {fileID: 0}
+--- !u!114 &796105200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796105197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 0}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 796105199}
+  Choices:
+  - {fileID: 470949314}
+  - {fileID: 1014533254}
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &862785007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862785008}
+  - component: {fileID: 862785010}
+  - component: {fileID: 862785009}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &862785008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862785007}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &862785009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862785007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Maybe a small quiz might cheer you up?
+  Req: {fileID: 0}
+--- !u!114 &862785010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862785007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1252766655}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 862785009}
+  Choices: []
   FinalText: 
   FinalChoices: []
   Loading: 0
@@ -3283,8 +4249,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d1842859d301ed4394a79b48cb6124d, type: 2}
-  m_sharedMaterial: {fileID: 1120007766419340120, guid: 8d1842859d301ed4394a79b48cb6124d,
+  m_fontAsset: {fileID: 11400000, guid: 90923031da9761740873a00c409a0b4f, type: 2}
+  m_sharedMaterial: {fileID: -3935127701476608187, guid: 90923031da9761740873a00c409a0b4f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3317,7 +4283,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 516
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3446,6 +4412,7 @@ MonoBehaviour:
   AddDelay: 1.5
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 917351468}
   Choices: []
@@ -3734,6 +4701,26 @@ Transform:
   - {fileID: 1045974320}
   - {fileID: 763281685}
   - {fileID: 604390347}
+  - {fileID: 2093166043}
+  - {fileID: 1352515027}
+  - {fileID: 1172738074}
+  - {fileID: 1762700209}
+  - {fileID: 796105198}
+  - {fileID: 1335210658}
+  - {fileID: 1625006263}
+  - {fileID: 862785008}
+  - {fileID: 1252766653}
+  - {fileID: 1249223511}
+  - {fileID: 191723323}
+  - {fileID: 172700752}
+  - {fileID: 486632410}
+  - {fileID: 1856079822}
+  - {fileID: 266051275}
+  - {fileID: 595618831}
+  - {fileID: 1176340443}
+  - {fileID: 518622122}
+  - {fileID: 1086598511}
+  - {fileID: 1893150608}
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3867,6 +4854,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &984502699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984502700}
+  - component: {fileID: 984502701}
+  m_Layer: 0
+  m_Name: Remind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984502700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984502699}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352515027}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984502701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984502699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c0bf73a887bd468debb7decacc4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Remind me about this planet again?
+  Target: 
+  TargetUnit: {fileID: 1172738076}
+  Req: {fileID: 0}
 --- !u!1 &984626287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,6 +4947,53 @@ MonoBehaviour:
   Content: Little Inferno
   Target: LittleInferno
   TargetUnit: {fileID: 1277944733}
+  Req: {fileID: 0}
+--- !u!1 &1014533252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1014533253}
+  - component: {fileID: 1014533254}
+  m_Layer: 0
+  m_Name: '...'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1014533253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014533252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 796105198}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014533254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014533252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c0bf73a887bd468debb7decacc4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: '......'
+  Target: 
+  TargetUnit: {fileID: 1335210660}
   Req: {fileID: 0}
 --- !u!1 &1015205246
 GameObject:
@@ -4066,6 +5147,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 1045974321}
   Choices:
@@ -4268,6 +5350,84 @@ MonoBehaviour:
   Target: 
   TargetUnit: {fileID: 654026492}
   Req: {fileID: 0}
+--- !u!1 &1086598510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086598511}
+  - component: {fileID: 1086598513}
+  - component: {fileID: 1086598512}
+  m_Layer: 0
+  m_Name: Equipped
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086598511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086598510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086598512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086598510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: However,*D15* the ship is well-equipped to prevent any structural damage.
+    Although,  I would definitely advise against stepping outside the ship.
+  Req: {fileID: 0}
+--- !u!114 &1086598513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086598510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1893150610}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1086598512}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &1132301059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,6 +5479,160 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TEXT: {fileID: 727799320}
   Index: 0
+--- !u!1 &1172738073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1172738074}
+  - component: {fileID: 1172738076}
+  - component: {fileID: 1172738075}
+  m_Layer: 0
+  m_Name: Intro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1172738074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172738073}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1172738075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172738073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Sir, Neptune 4 is a terrestrial planet.
+  Req: {fileID: 0}
+--- !u!114 &1172738076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172738073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1762700211}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1172738075}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &1176340442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176340443}
+  - component: {fileID: 1176340445}
+  - component: {fileID: 1176340444}
+  m_Layer: 0
+  m_Name: AfterAll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1176340443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176340442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176340444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176340442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "After all,*D15* it is almost identical compared to Earth\u2019s gravity."
+  Req: {fileID: 0}
+--- !u!114 &1176340445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176340442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 518622124}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1176340444}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &1186469684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,9 +5763,170 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 1211733417}
   Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &1249223510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249223511}
+  - component: {fileID: 1249223513}
+  - component: {fileID: 1249223512}
+  m_Layer: 0
+  m_Name: Close
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249223511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249223510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249223512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249223510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Well,*D15* close enough,*D30* it has been exactly 10 years 6 months 15
+    days 1 hour and 32 minutes.
+  Req: {fileID: 0}
+--- !u!114 &1249223513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249223510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 191723325}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1249223512}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &1252766652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252766653}
+  - component: {fileID: 1252766655}
+  - component: {fileID: 1252766654}
+  m_Layer: 0
+  m_Name: Recollection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1252766653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252766652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 636062227}
+  - {fileID: 1275883197}
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1252766654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252766652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Let this be a quick recollection for the day:*D50**n* How many years have
+    you left Earth?
+  Req: {fileID: 0}
+--- !u!114 &1252766655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252766652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 0}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1252766654}
+  Choices:
+  - {fileID: 636062228}
+  - {fileID: 1275883198}
   FinalText: 
   FinalChoices: []
   Loading: 0
@@ -4535,6 +6010,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259504119}
   m_CullTransparentMesh: 0
+--- !u!1 &1275883196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275883197}
+  - component: {fileID: 1275883198}
+  m_Layer: 0
+  m_Name: '...'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1275883197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275883196}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1252766653}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1275883198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275883196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c0bf73a887bd468debb7decacc4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: '...'
+  Target: 
+  TargetUnit: {fileID: 172700754}
+  Req: {fileID: 0}
 --- !u!1 &1277944730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4600,6 +6122,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 1277944732}
   Choices: []
@@ -4693,6 +6216,166 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 180, y: 63.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1335210657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335210658}
+  - component: {fileID: 1335210660}
+  - component: {fileID: 1335210659}
+  m_Layer: 0
+  m_Name: Nostalgic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1335210658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335210657}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335210659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335210657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Are you getting nostalgic,*D15* Sir?*D50**n* My reading shows fluctuation
+    in your life sign.
+  Req: {fileID: 0}
+--- !u!114 &1335210660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335210657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1625006265}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1335210659}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &1352515026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352515027}
+  - component: {fileID: 1352515029}
+  - component: {fileID: 1352515028}
+  m_Layer: 0
+  m_Name: Approach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1352515027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352515026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 984502700}
+  - {fileID: 1561577830}
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1352515028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352515026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: We are approaching Neptune 4. *D50*Entering the planet orbit in estimated
+    1 hour.
+  Req: {fileID: 0}
+--- !u!114 &1352515029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352515026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 0}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1352515028}
+  Choices:
+  - {fileID: 984502701}
+  - {fileID: 1561577831}
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &1355734656
 GameObject:
   m_ObjectHideFlags: 0
@@ -4758,6 +6441,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 1355734658}
   Choices: []
@@ -4839,6 +6523,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 1413820806}
   Choices:
@@ -4980,6 +6665,7 @@ MonoBehaviour:
   AddDelay: 2
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 1497032127}
   Choices: []
@@ -5028,6 +6714,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 1511831870}
   Choices: []
@@ -5085,7 +6772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1556145479
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5134,6 +6821,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 180, y: 63.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1561577829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1561577830}
+  - component: {fileID: 1561577831}
+  m_Layer: 0
+  m_Name: Morning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1561577830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561577829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352515027}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1561577831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561577829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c0bf73a887bd468debb7decacc4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "Morning? Since when there\u2019s day and night in space?"
+  Target: 
+  TargetUnit: {fileID: 1172738076}
+  Req: {fileID: 0}
 --- !u!1 &1580394667
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,8 +6902,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: 0.0000075102}
-  m_SizeDelta: {x: 573, y: 89.59}
+  m_AnchoredPosition: {x: 0.000022888, y: -8.01}
+  m_SizeDelta: {x: 573, y: 73.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580394669
 MonoBehaviour:
@@ -5193,8 +6927,8 @@ MonoBehaviour:
 
     But I really want to sleep.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d1842859d301ed4394a79b48cb6124d, type: 2}
-  m_sharedMaterial: {fileID: 1120007766419340120, guid: 8d1842859d301ed4394a79b48cb6124d,
+  m_fontAsset: {fileID: 11400000, guid: 90923031da9761740873a00c409a0b4f, type: 2}
+  m_sharedMaterial: {fileID: -3935127701476608187, guid: 90923031da9761740873a00c409a0b4f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5220,8 +6954,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5404,6 +7138,7 @@ MonoBehaviour:
   AddDelay: 0
   AddReadDelay: 0
   PlayerSide: 1
+  AutoNext: 0
   Blocks:
   - {fileID: 1611814491}
   Choices: []
@@ -5431,6 +7166,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Key: Sundered_
   Value: 1
+--- !u!1 &1625006262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1625006263}
+  - component: {fileID: 1625006265}
+  - component: {fileID: 1625006264}
+  m_Layer: 0
+  m_Name: LongTime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1625006263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625006262}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625006264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625006262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: "After all,*D15* it\u2019s already been a long time since you left Earth."
+  Req: {fileID: 0}
+--- !u!114 &1625006265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625006262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 862785010}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1625006264}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &1626454412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5572,6 +7384,237 @@ MonoBehaviour:
   Target: Hello
   TargetUnit: {fileID: 353448066}
   Req: {fileID: 0}
+--- !u!1 &1762700208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762700209}
+  - component: {fileID: 1762700211}
+  - component: {fileID: 1762700210}
+  m_Layer: 0
+  m_Name: Earth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1762700209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762700208}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762700210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762700208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: It has oxygen and a day-night cycle of 25 hours, *D15*very similar to Earth.
+  Req: {fileID: 0}
+--- !u!114 &1762700211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762700208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 796105200}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1762700210}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &1856079821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856079822}
+  - component: {fileID: 1856079824}
+  - component: {fileID: 1856079823}
+  m_Layer: 0
+  m_Name: Land
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856079822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856079821}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856079823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856079821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Initializing landing procedure...
+  Req: {fileID: 0}
+--- !u!114 &1856079824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856079821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 266051277}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 1
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 1
+  Blocks:
+  - {fileID: 1856079823}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+--- !u!1 &1893150607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893150608}
+  - component: {fileID: 1893150610}
+  - component: {fileID: 1893150609}
+  m_Layer: 0
+  m_Name: Advise
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893150608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893150607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1893150609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893150607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Although,*D15* I would definitely advise against stepping outside the ship.
+  Req: {fileID: 0}
+--- !u!114 &1893150610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893150607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 0}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 1893150609}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
 --- !u!1 &1993278117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5636,6 +7679,7 @@ MonoBehaviour:
   AddDelay: 3
   AddReadDelay: 0
   PlayerSide: 0
+  AutoNext: 0
   Blocks:
   - {fileID: 1993278119}
   Choices: []
@@ -5859,7 +7903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -140, y: 0.000030517578}
+  m_AnchoredPosition: {x: 190, y: 0}
   m_SizeDelta: {x: 207.2, y: 78.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077597466
@@ -5888,5 +7932,118 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 180, y: 63.5, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 590.04047, y: 63.50002, z: 1}
+  m_Center: {x: 205.0202, y: 0, z: 0}
+--- !u!1 &2091308900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2091308901}
+  m_Layer: 5
+  m_Name: AnimBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2091308901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091308900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 565549127}
+  m_Father: {fileID: 575436189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2093166042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2093166043}
+  - component: {fileID: 2093166045}
+  - component: {fileID: 2093166044}
+  m_Layer: 0
+  m_Name: Morning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2093166043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093166042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954488497}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093166044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093166042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Good Morning, Captain. *D50*8 Earth hours have*n*passed since our departure.
+  Req: {fileID: 0}
+--- !u!114 &2093166045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093166042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1352515029}
+  NextUnitReq: {fileID: 0}
+  AddDelay: 0
+  AddReadDelay: 0
+  PlayerSide: 0
+  AutoNext: 0
+  Blocks:
+  - {fileID: 2093166044}
+  Choices: []
+  FinalText: 
+  FinalChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []

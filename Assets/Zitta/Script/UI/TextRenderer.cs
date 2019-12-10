@@ -5,7 +5,8 @@ using TMPro;
 
 public class TextRenderer : MonoBehaviour {
     public TextMeshProUGUI TEXT;
-    public int Index;
+    public TextMeshProUGUI AlterTEXT;
+    public UnitType TargetType;
 
     // Start is called before the first frame update
     void Start()
@@ -16,19 +17,22 @@ public class TextRenderer : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        TEXT.text = TextControl.Main.GetText(Index, out bool PlayerSide);
-        if (TEXT.text == "")
-            return;
-        /*
-        if (PlayerSide)
+        string s = TextControl.Main.GetText(TargetType, out bool Alter);
+        if (Alter)
         {
-            TEXT.alignment = TextAlignmentOptions.MidlineRight;
-            TEXT.text = TEXT.text + " -";
+            if (TargetType == UnitType.Player && s.Length > 0)
+                AlterTEXT.text = /*"- " + */s;
+            else
+                AlterTEXT.text = s;
+            TEXT.text = "";
         }
         else
         {
-            TEXT.alignment = TextAlignmentOptions.MidlineLeft;
-            TEXT.text = "- " + TEXT.text;
-        }*/
+            if (TargetType == UnitType.Player && s.Length > 0)
+                TEXT.text = /*"- " + */s;
+            else
+                TEXT.text = s;
+            AlterTEXT.text = "";
+        }
     }
 }
