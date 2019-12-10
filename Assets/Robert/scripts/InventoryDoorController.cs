@@ -65,6 +65,7 @@ public class InventoryDoorController : MonoBehaviour
         if (InventoryDoorController.hasItem == true)
         {
         InventoryDoorController.hasItem = true;
+            //GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().AddItem(ItemCode);
         }
        
     }
@@ -73,10 +74,21 @@ public class InventoryDoorController : MonoBehaviour
         if (InventoryDoorController.hasItem == true)
         {
             InventoryDoorController.hasItem = false;
+            //GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().DeleteItem(ItemCode);
         }
 
         //InventoryDoorController.hasItem = false;
     }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Item")
+    //    {
+   //         hasItem = true;
+   //         Debug.Log("Item on door");
+   //     }
+  //  }
+
+
 
 
     //void OnCollisionEnter2D(Collision2D collision)
@@ -94,7 +106,7 @@ public class InventoryDoorController : MonoBehaviour
     //    }
     //  }
 
-     
+
     void OnMouseDown()
     {
        // spriteRenderer.color = new Color(1, 1, 1, 1);

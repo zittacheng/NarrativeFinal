@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4578773172620844218}
   - component: {fileID: 4578773172620844221}
+  - component: {fileID: 5120082617879873305}
   m_Layer: 0
-  m_Name: planet sample 1_0
+  m_Name: planet sample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,6 +81,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5120082617879873305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4578773172620844219}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70aa51ad55aeea64788e02ee3debba2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4578773172668037265
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +219,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a6ca1ff0844527d4b9671e690cfe0b9b, type: 3}
   - {fileID: 26983926538926579, guid: 7776a69013452a44e90cab36af3b0b5c, type: 3}
   - {fileID: 4565152561491793471, guid: 0223874f06776cd4195f2196b96ff889, type: 3}
+  animationClip:
+  - {fileID: 0}
+  - {fileID: 7400000, guid: a1786e879b7f6114eaf66ac1f9679de1, type: 2}
+  - {fileID: 7400000, guid: ad8f010fb8259064cad0475721384d40, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 7400000, guid: d95b8df7b342f174ab74c52ad0ff4dde, type: 2}
+  - {fileID: 7400000, guid: 3f556fe543831be49a93256832483344, type: 2}
+  - {fileID: 0}
+  - {fileID: 7400000, guid: 80d52e7b2502b83428f4a1b785f1df42, type: 2}
+  - {fileID: 7400000, guid: 6969c094b0779ed4b971d5166f3e5d29, type: 2}
+  AnimationOfSample: {fileID: 5120082617879873305}
 --- !u!61 &4578773172668037266
 BoxCollider2D:
   m_ObjectHideFlags: 0

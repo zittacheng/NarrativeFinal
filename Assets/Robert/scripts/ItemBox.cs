@@ -23,6 +23,9 @@ public class ItemBox : MonoBehaviour
     // public Sprite Item8;
     // public Sprite Item9;
     public Sprite[] SampleImage;
+    public AnimationClip[] animationClip;
+    //public Animator animationOfSample;
+    public Animator AnimationOfSample;
 
 
 
@@ -40,9 +43,11 @@ public class ItemBox : MonoBehaviour
     void Update()
     {
 
-        
+        AnimationOfSample.SetInteger("ItemCode",ItemCode);
         spriteRenderer.sprite = SampleImage[ItemCode];
-
+        
+        //animationOfSample.Play("Item"+ItemCode.ToString()+"Analysis");
+        //animationOfSample.clip = animationClip[ItemCode];
         if (InventorySelectControl.deleteAllBoxes == true)
         {
             Destroy(gameObject);
@@ -57,12 +62,17 @@ public class ItemBox : MonoBehaviour
         if (InventorySelectControl.ItemCode != ItemCode)
         {
             animator.SetBool("selected", false);
-            
+            //animationOfSample.Stop();
+            AnimationOfSample.SetBool("Selected",false);
         }
         else if (InventorySelectControl.ItemCode == ItemCode)
         {
             animator.SetBool("selected", true);
-           //InventoryDetail.SetActive(true);
+            //spriteRenderer.sprite = SampleImage[ItemCode];
+            //InventoryDetail.SetActive(true);
+            //animationOfSample.Play()
+            AnimationOfSample.SetBool("Selected", true);
+
         }
     }
 
@@ -71,6 +81,7 @@ public class ItemBox : MonoBehaviour
     {
         animator.SetBool(AnimationBoolName, true);
         MouseOver = true;
+        
 
     }
     void OnMouseExit()
