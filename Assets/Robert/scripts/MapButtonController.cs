@@ -15,6 +15,9 @@ public class MapButtonController : MonoBehaviour
     private GameObject screenText;
     public Animator animator;
     public string AnimationTriggerName;
+    private bool mapOpen = false;
+    public GameObject MapInterface;
+
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -88,4 +91,20 @@ public class MapButtonController : MonoBehaviour
         //spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1);
         Debug.Log("mouse up");
     }
+
+    void OpenOrCloseMap()
+    {
+        if (MapInterface.activeSelf  == false)
+        {
+           // mapOpen = true;
+            MapInterface.SetActive(true);
+        }
+        else if (MapInterface.activeSelf == true)
+        {
+           // mapOpen = false;
+            MapInterface.SetActive(false);
+        }
+    }
+
+    
 }

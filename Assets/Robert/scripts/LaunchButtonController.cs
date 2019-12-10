@@ -15,6 +15,7 @@ public class LaunchButtonController : MonoBehaviour
     private GameObject screenText;
     public Animator animator;
     public string AnimationBoolName;
+    public Animator PlanetScene;
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -87,7 +88,7 @@ public class LaunchButtonController : MonoBehaviour
         {
             animator.SetBool(AnimationBoolName, false);
         }
-
+        PlanetScene.SetTrigger("Launch");
         
     }
     void OnMouseUp()
