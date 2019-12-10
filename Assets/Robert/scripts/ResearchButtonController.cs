@@ -15,6 +15,9 @@ public class ResearchButtonController : MonoBehaviour
     private GameObject screenText;
     public Animator animator;
     public string AnimationTriggerName;
+    private Animator ItemOnPlate;
+    public static bool hasItem = false;
+    private Animator ResearchPanel;
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -22,7 +25,8 @@ public class ResearchButtonController : MonoBehaviour
         largeValue = new Vector3(transform.localScale.x * scaleUp, transform.localScale.y * scaleUp, 1);
         smallValue = new Vector3(transform.localScale.x / scaleUp, transform.localScale.y / scaleUp, 1);
         screenText = GameObject.Find("screen text");
-
+        ItemOnPlate = GameObject.Find("SampleOnPlate").GetComponent<Animator>();
+        ResearchPanel = GameObject.Find("research panel").GetComponent<Animator>();
 
     }
 
@@ -79,8 +83,14 @@ public class ResearchButtonController : MonoBehaviour
         //  pz.z = 0;
 
         //Instantiate(prefab, pz, Quaternion.identity);
-        animator.SetTrigger(AnimationTriggerName);
 
+        if (hasItem == true)
+        {
+        animator.SetTrigger(AnimationTriggerName);
+        ItemOnPlate.SetTrigger("Click");
+            ResearchPanel.SetBool("Research",true);
+        }
+        
 
     }
     void OnMouseUp()
