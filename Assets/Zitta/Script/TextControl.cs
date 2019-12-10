@@ -23,6 +23,7 @@ public class TextControl : MonoBehaviour {
     public Animator ChoiceBarAnim;
     public Animator PlayerAnim;
     public Animator AIAnim;
+    public List<GameObject> ChoiceBases;
 
     public void Awake()
     {
@@ -64,6 +65,10 @@ public class TextControl : MonoBehaviour {
             {
                 if (GetCurrentUnit().AutoNext)
                     LoadUnit(GetCurrentUnit().GetNextUnit());
+                else if (GetCurrentUnit().EventMode)
+                {
+
+                }
                 else
                     NextActive = true;
             }
@@ -73,6 +78,15 @@ public class TextControl : MonoBehaviour {
 
         if (ChoiceBarAnim)
             ChoiceBarAnim.SetBool("Active", HaveChoice());
+
+        if (GetCurrentUnit())
+        {
+            int a = GetCurrentUnit().GetChoices().Count;
+            for (int i = 0; i < ChoiceBases.Count; i++)
+            {
+                ChoiceBases[i].SetActive(i == a - 1);
+            }
+        }
     }
 
     public void LoadUnit(TextUnit TU)
@@ -131,6 +145,11 @@ public class TextControl : MonoBehaviour {
         LoadUnit(C.GetTarget());
     }
 
+    public void ChooseEventChoice(EventChoice EC)
+    {
+        LoadUnit(EC.GetTarget());
+    }
+
     public string GetText(UnitType TargetType, out bool AlterFont)
     {
         AlterFont = false;
@@ -173,5 +192,11 @@ public class TextControl : MonoBehaviour {
     public bool PlayerUnitActive()
     {
         return PlayerUnit;
+    }
+
+    public void Event(string Key)
+    {
+        if (GetCurrentUnit() && GetCurrentUnit().GetEventChoice(Key))
+            ChooseEventChoice(GetCurrentUnit().GetEventChoice(Key));
     }
 }
