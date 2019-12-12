@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ItemBox
   - Item
+  - ItemLocation
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: InventoryInterface
+    uniqueID: 370718071
+    locked: 0
+  - name: MapInterface
+    uniqueID: 3673714661
     locked: 0

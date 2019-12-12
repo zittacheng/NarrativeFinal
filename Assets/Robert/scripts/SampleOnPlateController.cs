@@ -2,24 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryDoorController : MonoBehaviour
+public class SampleOnPlateController : MonoBehaviour
 {
+    [HideInInspector]public static int CurrentItemOnPlateCode = 0;
     // Start is called before the first frame update
     public float scaleUp;
     public SpriteRenderer spriteRenderer;
     public GameObject prefab;
-    private bool highlight = false;
+   // private bool highlight = false;
     private Vector3 largeValue;
     private Vector3 smallValue;
-    private int ItemCode;
-    private Animator animator;
+   // private int ItemCode;
+   // private Animator animator;
     public static bool hasItem = false;
+    public Animator Sample;
+    public Animator Research;
+    
     //private bool ifCollideWithMouse = false;
     void Start()
     {
         largeValue = new Vector3(transform.localScale.x * scaleUp, transform.localScale.y * scaleUp, 1);
         smallValue = new Vector3(transform.localScale.x / scaleUp, transform.localScale.y / scaleUp, 1);
-        animator = this.gameObject.GetComponent<Animator>();
+       // animator = this.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,66 +31,66 @@ public class InventoryDoorController : MonoBehaviour
     {
         Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pz.z = 0;
-        ItemCode = InventorySelectControl.ItemCode;
+     //   ItemCode = InventorySelectControl.ItemCode;
         if (pz.x > gameObject.transform.position.x - spriteRenderer.bounds.size.x / 2 && pz.x < gameObject.transform.position.x + spriteRenderer.bounds.size.x / 2 &&
                 pz.y > gameObject.transform.position.y - spriteRenderer.bounds.size.y / 2 && pz.y < gameObject.transform.position.y + spriteRenderer.bounds.size.y / 2
                )
         {
             //gameObject.transform.localScale = new Vector3(transform.localScale.x * scaleUp, transform.localScale.y * scaleUp, 1);
-            highlight = true;
+         //   highlight = true;
             Debug.Log("highlight");
         }
         else
         {
             //gameObject.transform.localScale = new Vector3(transform.localScale.x / scaleUp, transform.localScale.y / scaleUp, 1);
-            highlight = false;
+          //  highlight = false;
         }
 
-       if (hasItem)
-        { 
-            animator.SetBool("Dump", true);
-       //     animator.SetBool("Open", true);
-       }
-       else 
-       {
-           animator.SetBool("Dump", false);
-           //animator.SetBool("Open", false);
-       }
-        
-            
+        if (hasItem)
+        {
+          //  animator.SetBool("Dump", true);
+          //  animator.SetBool("Open", true);
+        }
+        else
+        {
+          //  animator.SetBool("Dump", false);
+          //  animator.SetBool("Open", false);
+        }
 
-            //gameObject.transform.localScale = new Vector3(transform.localScale.x / scaleUp, transform.localScale.y / scaleUp, 1);
-        
+
+
+        //gameObject.transform.localScale = new Vector3(transform.localScale.x / scaleUp, transform.localScale.y / scaleUp, 1);
+
     }
     void OnMouseEnter()
     {
         //gameObject.transform.localScale = new Vector3(transform.localScale.x * scaleUp, transform.localScale.y * scaleUp, 1);
         //   Debug.Log("highlight");
-      //  if (InventoryDoorController.hasItem == true)
+       // if (InventoryDoorController.hasItem == true)
       //  {
-       // InventoryDoorController.hasItem = true;
+      //      InventoryDoorController.hasItem = true;
             //GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().AddItem(ItemCode);
       //  }
-       
+
     }
-    void OnMouseExit()
-    {
-      //  if (InventoryDoorController.hasItem == true)
-      //  {
-       //     InventoryDoorController.hasItem = false;
+  //  void OnMouseExit()
+   // {
+     //   if (InventoryDoorController.hasItem == true)
+     //   {
+     //       InventoryDoorController.hasItem = false;
             //GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().DeleteItem(ItemCode);
-      //  }
+     //   }
 
         //InventoryDoorController.hasItem = false;
-    }
+    //}
     //void OnCollisionEnter2D(Collision2D collision)
     //{
     //    if (collision.gameObject.tag == "Item")
     //    {
-   //         hasItem = true;
-   //         Debug.Log("Item on door");
-   //     }
-  //  }
+    //         hasItem = true;
+    //         Debug.Log("Item on door");
+    //     }
+    //  }
 
 
 
@@ -109,15 +113,19 @@ public class InventoryDoorController : MonoBehaviour
 
     void OnMouseDown()
     {
-       // spriteRenderer.color = new Color(1, 1, 1, 1);
+        // spriteRenderer.color = new Color(1, 1, 1, 1);
 
         Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pz.z = 0;
-        if (ItemCode != 0 && ItemCode !=4)
+
+        if (Research.GetBool("Research") == false&&hasItem == true)
         {
-        var a = Instantiate(prefab, pz, Quaternion.identity);
-            a.GetComponent<ItemController>().FromInventory= true;
-            a.GetComponent<ItemController>().ItemCode = ItemCode;
+        var b = Instantiate(prefab, pz, Quaternion.identity);
+            hasItem = false;
+        b.GetComponent<ItemController>().ItemCode = CurrentItemOnPlateCode;
+            b.GetComponent<ItemController>().FromResearchStation = true;
+            ResearchButtonController.hasItem = false;
+            Sample.SetInteger("ItemCode",0);
         }
         
         //GameObject.Find("Item(1)").GetComponent<ItemController>().
@@ -125,7 +133,7 @@ public class InventoryDoorController : MonoBehaviour
     }
     void OnMouseUp()
     {
-       // spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1);
-       // Debug.Log("mouse up");
+        // spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1);
+        // Debug.Log("mouse up");
     }
 }

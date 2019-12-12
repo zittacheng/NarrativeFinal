@@ -15,7 +15,8 @@ public class DroidButtonController : MonoBehaviour
     private GameObject screenText;
     public Animator animator;
     public string AnimationTriggerName;
-    int TempItemCode = 1;
+    public static int DroidDeployedTime = 0;
+    //int TempItemCode = 1;
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -54,8 +55,6 @@ public class DroidButtonController : MonoBehaviour
         }
         else
         {
-
-
             //gameObject.transform.localScale = new Vector3(transform.localScale.x / scaleUp, transform.localScale.y / scaleUp, 1);
         }
     }
@@ -80,12 +79,20 @@ public class DroidButtonController : MonoBehaviour
         //  pz.z = 0;
 
         //Instantiate(prefab, pz, Quaternion.identity);
-        animator.SetTrigger(AnimationTriggerName);
 
+        if (animator.GetBool(AnimationTriggerName) != true)
+        {
+            
+            animator.SetBool(AnimationTriggerName, true);
+            TextControl.Main.Event("Droid", DroidDeployedTime);
+            DroidDeployedTime++;
+
+        }
+        
 
         
-        GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().AddItem(TempItemCode);
-        TempItemCode++;
+        //GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().AddItem(TempItemCode);
+        //TempItemCode++;
 
     }
     void OnMouseUp()

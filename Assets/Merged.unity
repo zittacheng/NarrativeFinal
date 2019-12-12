@@ -9623,7 +9623,6 @@ MonoBehaviour:
   animator: {fileID: 1550414571}
   AnimationTriggerName: Click
   MapInterface: {fileID: 0}
---- !u!1 &1631663894
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
