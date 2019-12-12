@@ -164,6 +164,12 @@ public class TextUnit : MonoBehaviour {
         return TempText;
     }
 
+    public void OnEnd()
+    {
+        foreach (UnitEffect UE in Effects)
+            UE.EndEffect();
+    }
+
     public List<Choice> GetChoices()
     {
         return FinalChoices;

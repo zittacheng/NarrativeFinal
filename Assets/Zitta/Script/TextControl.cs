@@ -93,6 +93,8 @@ public class TextControl : MonoBehaviour {
     {
         if (!TU)
             return;
+        if (GetCurrentUnit())
+            GetCurrentUnit().OnEnd();
 
         TU.OnLoad();
         NextActive = false;
