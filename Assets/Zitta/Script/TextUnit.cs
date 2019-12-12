@@ -30,6 +30,11 @@ public class TextUnit : MonoBehaviour {
     public List<VariableChange> Changes;
     public List<UnitEffect> Effects;
 
+    public void Awake()
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -157,6 +162,12 @@ public class TextUnit : MonoBehaviour {
         }
         TempText = TempText.Replace(oldValue: "*n*", newValue: "\n");
         return TempText;
+    }
+
+    public void OnEnd()
+    {
+        foreach (UnitEffect UE in Effects)
+            UE.EndEffect();
     }
 
     public List<Choice> GetChoices()

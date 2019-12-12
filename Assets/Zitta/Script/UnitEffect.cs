@@ -20,4 +20,9 @@ public class UnitEffect : MonoBehaviour {
     {
 
     }
+
+    public virtual void EndEffect()
+    {
+
+    }
 }
