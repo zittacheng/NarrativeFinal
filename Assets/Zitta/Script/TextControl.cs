@@ -93,6 +93,8 @@ public class TextControl : MonoBehaviour {
     {
         if (!TU)
             return;
+        if (GetCurrentUnit())
+            GetCurrentUnit().OnEnd();
 
         TU.OnLoad();
         NextActive = false;
@@ -194,7 +196,7 @@ public class TextControl : MonoBehaviour {
         return PlayerUnit;
     }
 
-    public void Event(string Key)
+    public void Event(string Key, int Value)
     {
         if (GetCurrentUnit() && GetCurrentUnit().GetEventChoice(Key))
             ChooseEventChoice(GetCurrentUnit().GetEventChoice(Key));
