@@ -6,6 +6,7 @@ public class MapController : MonoBehaviour
 {
     [HideInInspector]public static int CurrentLocationCode = 1;
     [HideInInspector] public static int CurrentSelectLocationCode = 0;
+    [HideInInspector] public static bool AbleToLaunch = false;
     // Start is called before the first frame update
     void Start()
     {

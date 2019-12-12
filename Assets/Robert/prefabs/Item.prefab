@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6555457017236485967}
   - component: {fileID: 8933643184035805090}
   - component: {fileID: 3846567776017884853}
-  - component: {fileID: 2510130849813013415}
+  - component: {fileID: 1357154828127530869}
   m_Layer: 0
   m_Name: Item
   m_TagString: Item
@@ -49,7 +49,7 @@ MonoBehaviour:
   ItemImage:
   - {fileID: 0}
   - {fileID: 8169947114987236596, guid: 7163d2ef06322da419fcdd810f428c1a, type: 3}
-  - {fileID: 2095427795416882507, guid: e2803c11517830848ac778498c3e94cf, type: 3}
+  - {fileID: -6272326280663153000, guid: e2803c11517830848ac778498c3e94cf, type: 3}
   - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
   - {fileID: 21300000, guid: 89bd217b3c28b2d43b2a6929561e9b5b, type: 3}
   - {fileID: -6060080571120449969, guid: 20e3042a17f2a3e499783b084f84bacd, type: 3}
@@ -57,7 +57,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a6ca1ff0844527d4b9671e690cfe0b9b, type: 3}
   - {fileID: 26983926538926579, guid: 7776a69013452a44e90cab36af3b0b5c, type: 3}
   - {fileID: 4565152561491793471, guid: 0223874f06776cd4195f2196b96ff889, type: 3}
+  ItemCode: 0
   targetObject: 
+  FromInventory: 0
+  FromResearchStation: 0
 --- !u!212 &8933643184035805090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -133,7 +136,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0269058, y: 1.216533}
   m_EdgeRadius: 0
---- !u!50 &2510130849813013415
+--- !u!50 &1357154828127530869
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -153,4 +156,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

@@ -44,12 +44,14 @@ public class InventorySelectControl : MonoBehaviour
 
     void Start()
     {
-        
+        AddItem(1);
+        AddItem(2);
+        AddItem(3);
     }
 
     void OnEnable()
     {
-        Debug.Log("PrintOnEnable: script was enabled");
+       // Debug.Log("PrintOnEnable: script was enabled");
     }
 
     // Update is called once per frame
@@ -88,6 +90,8 @@ public class InventorySelectControl : MonoBehaviour
             GameObject.Destroy(ItemBox);
 
         ItemCode = 0;
+        InventoryDoorController.hasItem = false;
+        GameObject.Find("inventory door").GetComponent<Animator>().SetBool("Open", false);
         //instantiate all new boxes
         for (int i = 0; i < 3; i++)
         {
@@ -100,9 +104,10 @@ public class InventorySelectControl : MonoBehaviour
                     Debug.Log("instantiate box");
                     //CurrentItemCode = itemList[i, j];
 
-
-                    var obj = (GameObject)Instantiate(prefabSelectBox, new Vector3(-4f  + i * 1.8f, 3.6f - j * 1.8f), Quaternion.identity, parent.transform);
+                    //-3.7f + i * 1.8f, 3f - j * 1.8f
+                    var obj = (GameObject)Instantiate(prefabSelectBox, new Vector3(parent.transform.position.x-3.8f+i*1.8f,parent.transform.position.y+2f-j*1.8f), Quaternion.identity,parent.transform);
                     obj.GetComponent<ItemBox>().ItemCode = itemList[i, j];
+                    //obj.transform.parent = parent.transform;
 
                     //Instantiate(prefabSelectBox, new Vector3(-4f + i * 1.8f, 3.6f - j * 1.8f), Quaternion.identity, parent.transform);
                 // ClickBox.SendMessage("setItemCode", itemList[i,j]);

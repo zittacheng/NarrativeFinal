@@ -10590,6 +10590,7 @@ MonoBehaviour:
   buttonName: Launch
   animator: {fileID: 1495629503}
   AnimationBoolName: Launch
+  PlanetScene: {fileID: 0}
 --- !u!212 &1495629501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11110,6 +11111,7 @@ MonoBehaviour:
   buttonName: Map
   animator: {fileID: 1550414571}
   AnimationTriggerName: Click
+  MapInterface: {fileID: 0}
 --- !u!1 &1556542264
 GameObject:
   m_ObjectHideFlags: 0

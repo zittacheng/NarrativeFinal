@@ -18,6 +18,7 @@ public class ResearchButtonController : MonoBehaviour
     private Animator ItemOnPlate;
     public static bool hasItem = false;
     private Animator ResearchPanel;
+    private float targetTime = 12.0f;
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -35,6 +36,24 @@ public class ResearchButtonController : MonoBehaviour
     {
         Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pz.z = 0;
+
+
+
+       
+        if (ResearchPanel.GetBool("Research") == true) {
+
+            targetTime -= Time.deltaTime;
+
+            if (targetTime <= 0.0f)
+            {
+                ResearchPanel.SetBool("Research",false);
+                ItemOnPlate.SetTrigger("Click");
+                targetTime = 12.0f;
+                
+
+            }
+        }
+
 
         if (pz.x > gameObject.transform.position.x - spriteRenderer.bounds.size.x / 2 && pz.x < gameObject.transform.position.x + spriteRenderer.bounds.size.x / 2 &&
                 pz.y > gameObject.transform.position.y - spriteRenderer.bounds.size.y / 2 && pz.y < gameObject.transform.position.y + spriteRenderer.bounds.size.y / 2
@@ -84,9 +103,10 @@ public class ResearchButtonController : MonoBehaviour
 
         //Instantiate(prefab, pz, Quaternion.identity);
 
-        if (hasItem == true)
+        if (hasItem == true&&animator.GetBool("Research") == false)
         {
-        animator.SetTrigger(AnimationTriggerName);
+            
+            animator.SetTrigger(AnimationTriggerName);
         ItemOnPlate.SetTrigger("Click");
             ResearchPanel.SetBool("Research",true);
         }

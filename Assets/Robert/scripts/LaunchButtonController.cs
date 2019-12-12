@@ -16,6 +16,8 @@ public class LaunchButtonController : MonoBehaviour
     public Animator animator;
     public string AnimationBoolName;
     public Animator PlanetScene;
+    public static bool EnableLaunch = false;
+    public static bool EnableLanding = false;
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -80,15 +82,22 @@ public class LaunchButtonController : MonoBehaviour
         //  pz.z = 0;
 
         //Instantiate(prefab, pz, Quaternion.identity);
-        if (animator.GetBool(AnimationBoolName) == false)
+        if (animator.GetBool(AnimationBoolName) == false&&EnableLaunch)
         {
          animator.SetBool(AnimationBoolName, true);
+
+            EnableLaunch = false;
+            TextControl.Main.Event("Launch",MapController.CurrentSelectLocationCode);
+
         }
-        else if (animator.GetBool(AnimationBoolName) == true)
+        else if (animator.GetBool(AnimationBoolName) == true&&EnableLanding)
         {
             animator.SetBool(AnimationBoolName, false);
+            TextControl.Main.Event("Landing",0);
+            //PlanetScene.SetTrigger("Launch");
+            EnableLanding = false;
         }
-        PlanetScene.SetTrigger("Launch");
+        
         
     }
     void OnMouseUp()
