@@ -28,10 +28,14 @@ public class DriveControl : MonoBehaviour {
         BGC.Land();
     }
 
-    public void TakeOff(int NextIndex)
+    public void TakeOff()
     {
         BackgroundControl BGC = Planets[NextPlanet];
         BGC.TakeOff();
+    }
+
+    public void SetNextPlanet(int NextIndex)
+    {
         NextPlanet = NextIndex;
     }
 
