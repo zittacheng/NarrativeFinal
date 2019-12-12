@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CloudIV
+  m_Name: Ourea1_CloudII
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,33 +22,33 @@ AnimationClip:
         time: 0
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0.0864019, y: 0, z: 0}
+        outSlope: {x: 0.09980961, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 209.83333
-        value: {x: 18.13, y: 0, z: 0}
-        inSlope: {x: 0.0864019, y: -0, z: -0}
+        time: 70.03333
+        value: {x: 6.99, y: 0, z: 0}
+        inSlope: {x: 0.09980961, y: -0, z: -0}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 214.38333
-        value: {x: -5.04, y: 0, z: 0}
+        time: 70.36667
+        value: {x: -15.61, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0.058423497, y: 0, z: 0}
+        outSlope: {x: 0.12041656, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 300.65
+        time: 200
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0.058423497, y: -0, z: -0}
+        inSlope: {x: 0.12041656, y: -0, z: -0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
@@ -57,7 +57,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudIV/Sprite
+    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudII/Sprite
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -69,7 +69,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1431193108
+      path: 4040517011
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -81,7 +81,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 300.65
+    m_StopTime: 200
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -104,33 +104,33 @@ AnimationClip:
         time: 0
         value: 0
         inSlope: 0
-        outSlope: 0.0864019
+        outSlope: 0.09980961
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 209.83333
-        value: 18.13
-        inSlope: 0.0864019
+        time: 70.03333
+        value: 6.99
+        inSlope: 0.09980961
         outSlope: Infinity
         tangentMode: 101
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 214.38333
-        value: -5.04
+        time: 70.36667
+        value: -15.61
         inSlope: 0
-        outSlope: 0.058423497
+        outSlope: 0.12041656
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 300.65
+        time: 200
         value: 0
-        inSlope: 0.058423497
+        inSlope: 0.12041656
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -140,7 +140,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudIV/Sprite
+    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudII/Sprite
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -156,7 +156,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 209.83333
+        time: 70.03333
         value: 0
         inSlope: -0
         outSlope: Infinity
@@ -165,7 +165,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 214.38333
+        time: 70.36667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -174,7 +174,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 300.65
+        time: 200
         value: 0
         inSlope: -0
         outSlope: 0
@@ -186,7 +186,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudIV/Sprite
+    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudII/Sprite
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -202,7 +202,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 209.83333
+        time: 70.03333
         value: 0
         inSlope: -0
         outSlope: Infinity
@@ -211,7 +211,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 214.38333
+        time: 70.36667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -220,7 +220,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 300.65
+        time: 200
         value: 0
         inSlope: -0
         outSlope: 0
@@ -232,7 +232,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudIV/Sprite
+    path: AnimBase/SecondBase/LayerIII/CloudBase/CloudII/Sprite
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

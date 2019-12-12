@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JumpLoop
+  m_Name: Jump_Loop
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -36,7 +36,7 @@ AnimationClip:
     - time: 0.56666666
       value: {fileID: 21300000, guid: 5f344f000fcf05a47a8d11cc08b10aec, type: 3}
     attribute: m_Sprite
-    path: AnimBase/Jump/AnimBase/Sprite
+    path: AnimBase/Sprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -47,7 +47,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1632928433
+      path: 2276210778
       attribute: 0
       script: {fileID: 0}
       typeID: 212
