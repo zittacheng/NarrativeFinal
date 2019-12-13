@@ -7,6 +7,9 @@ TagManager:
   - ItemBox
   - Item
   - ItemLocation
+  - Ground
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -49,4 +52,7 @@ TagManager:
     locked: 0
   - name: MapInterface
     uniqueID: 3673714661
+    locked: 0
+  - name: GameInterface
+    uniqueID: 3198074593
     locked: 0
