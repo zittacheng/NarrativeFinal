@@ -1,5 +1,103 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1755330970145052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7957934511743242525}
+  - component: {fileID: 3968630249381406560}
+  - component: {fileID: 1097103915033855281}
+  - component: {fileID: 2141128640495907158}
+  m_Layer: 0
+  m_Name: '[TakeOff]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7957934511743242525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755330970145052}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 480722433681028395}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3968630249381406560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755330970145052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1056451211360870994}
+  NextUnitReq: {fileID: 0}
+  UType: 0
+  AddDelay: 1.7
+  AddReadDelay: 6
+  AutoNext: 1
+  EventMode: 0
+  AlterFont: 0
+  Blocks:
+  - {fileID: 1097103915033855281}
+  Choices: []
+  EventChoices: []
+  FinalText: 
+  FinalChoices: []
+  FinalEventChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+  Effects:
+  - {fileID: 2141128640495907158}
+--- !u!114 &1097103915033855281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755330970145052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: 
+  Req: {fileID: 0}
+--- !u!114 &2141128640495907158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755330970145052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a60b5dd2cbd8249afcf346bc646297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 0
+  TakeOff: 1
 --- !u!1 &6250137280823551
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +367,7 @@ Transform:
   - {fileID: 1207743070305933685}
   - {fileID: 961226384985307569}
   - {fileID: 1759758433472966781}
+  - {fileID: 1205642519686693734}
   m_Father: {fileID: 1654986204155443785}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1505,6 +1604,7 @@ GameObject:
   - component: {fileID: 6707828729364160688}
   - component: {fileID: 2831239614536470206}
   - component: {fileID: 2340827540673397281}
+  - component: {fileID: 422350661070303855}
   m_Layer: 0
   m_Name: InCase (3)
   m_TagString: Untagged
@@ -1577,6 +1677,21 @@ MonoBehaviour:
   Content: 'But,*D25* as you said before,*D25* please be aware that some items might
     be useful in our following journey. '
   Req: {fileID: 0}
+--- !u!114 &422350661070303855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979304289597863351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20cba18aa2095448417113189cb467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetIndex: 06000000
+  Units:
+  - {fileID: 2977751985733074302}
 --- !u!1 &979414728785214568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,7 +2306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4731613862770649114
 Transform:
   m_ObjectHideFlags: 0
@@ -3221,7 +3336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8528963833478464439}
   m_Layer: 0
-  m_Name: '-----------PostRelease--------'
+  m_Name: '---------PostRelease----------'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3865,7 +3980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c30c308791568e34ea7d06ca89704cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartUnit: {fileID: 2977751985733074302}
+  StartUnit: {fileID: 1654986203530899487}
 --- !u!1 &1654986203648800959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,6 +3992,7 @@ GameObject:
   - component: {fileID: 1654986203648800928}
   - component: {fileID: 1654986203648800930}
   - component: {fileID: 1654986203648800929}
+  - component: {fileID: 7195325297225381828}
   m_Layer: 0
   m_Name: Enough
   m_TagString: Untagged
@@ -3933,7 +4049,8 @@ MonoBehaviour:
   Commands: []
   CommandRanges: []
   Changes: []
-  Effects: []
+  Effects:
+  - {fileID: 7195325297225381828}
 --- !u!114 &1654986203648800929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3949,6 +4066,18 @@ MonoBehaviour:
   Content: Enough conversation for past sad memories,*D10* Captain.*D30* The droids
     are back!
   Req: {fileID: 0}
+--- !u!114 &7195325297225381828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654986203648800959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614067fa55747724f82a8b3af541f095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1654986203651620010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4567,6 +4696,7 @@ GameObject:
   - component: {fileID: 1654986203855167730}
   - component: {fileID: 1654986203855167732}
   - component: {fileID: 1654986203855167731}
+  - component: {fileID: 2345336554679688886}
   m_Layer: 0
   m_Name: Operating
   m_TagString: Untagged
@@ -4625,7 +4755,8 @@ MonoBehaviour:
   Commands: []
   CommandRanges: []
   Changes: []
-  Effects: []
+  Effects:
+  - {fileID: 2345336554679688886}
 --- !u!114 &1654986203855167731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4640,6 +4771,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: Yes,*D10* Captain.*D50* Simply operating on the control panel will do.
   Req: {fileID: 0}
+--- !u!114 &2345336554679688886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654986203855167729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d0697c09da280458f5fe55170f6094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 1
+  TakeOff: 0
 --- !u!1 &1654986203892591625
 GameObject:
   m_ObjectHideFlags: 0
@@ -11821,6 +11966,88 @@ Transform:
   m_Father: {fileID: 1462012531431047891}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2277361044259518309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7281092233980097804}
+  - component: {fileID: 2166368316124048825}
+  - component: {fileID: 6312330663818313185}
+  m_Layer: 0
+  m_Name: --Land
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7281092233980097804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277361044259518309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 819472895101365504}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2166368316124048825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277361044259518309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 3740525446935110457}
+  NextUnitReq: {fileID: 0}
+  UType: 1
+  AddDelay: 2
+  AddReadDelay: 0.01
+  AutoNext: 1
+  EventMode: 0
+  AlterFont: 0
+  Blocks:
+  - {fileID: 6312330663818313185}
+  Choices: []
+  EventChoices: []
+  FinalText: 
+  FinalChoices: []
+  FinalEventChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+  Effects: []
+--- !u!114 &6312330663818313185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277361044259518309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: DV00,*D10* prepare to land.
+  Req: {fileID: 0}
 --- !u!1 &2397553535789509493
 GameObject:
   m_ObjectHideFlags: 0
@@ -12224,7 +12451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8007418335420578507
 Transform:
   m_ObjectHideFlags: 0
@@ -12662,6 +12889,52 @@ MonoBehaviour:
   Content: But we can do nothing about it,*D10* Captain,*D25* except for leaving this
     galaxy as fast as possible.
   Req: {fileID: 0}
+--- !u!1 &2947025933081510636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649902037232977742}
+  - component: {fileID: 3222963678689022154}
+  m_Layer: 0
+  m_Name: Launch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &649902037232977742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947025933081510636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 318505914987327334}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3222963678689022154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947025933081510636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8baf3045d71414badcc311ae3a34ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetUnit: {fileID: 3824903981017300449}
+  Req: {fileID: 0}
+  Key: Launch
 --- !u!1 &2982628468757247189
 GameObject:
   m_ObjectHideFlags: 0
@@ -13231,7 +13504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Key: 
-  NextUnit: {fileID: 0}
+  NextUnit: {fileID: 8877097710006566829}
   NextUnitReq: {fileID: 0}
   UType: 0
   AddDelay: 0
@@ -13761,88 +14034,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: The local administration has a zero tolerance in industrial pollutants.
   Req: {fileID: 0}
---- !u!1 &3632516201205240016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7437863443366344210}
-  - component: {fileID: 1582576817895720261}
-  - component: {fileID: 513704025330121606}
-  m_Layer: 0
-  m_Name: Land
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7437863443366344210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632516201205240016}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 819472895101365504}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1582576817895720261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632516201205240016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: 
-  NextUnit: {fileID: 3674730772080118693}
-  NextUnitReq: {fileID: 0}
-  UType: 0
-  AddDelay: 1
-  AddReadDelay: 0
-  AutoNext: 1
-  EventMode: 0
-  AlterFont: 0
-  Blocks:
-  - {fileID: 513704025330121606}
-  Choices: []
-  EventChoices: []
-  FinalText: 
-  FinalChoices: []
-  FinalEventChoices: []
-  Loading: 0
-  LoadIndex: 0
-  RealIndex: 0
-  CurrentDelay: 0
-  Commands: []
-  CommandRanges: []
-  Changes: []
-  Effects: []
---- !u!114 &513704025330121606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632516201205240016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Content: Understood,*D10* Captain.*D50* Initializing landing procedure...
-  Req: {fileID: 0}
 --- !u!1 &3636137514822602694
 GameObject:
   m_ObjectHideFlags: 0
@@ -13854,6 +14045,7 @@ GameObject:
   - component: {fileID: 5540363542099271320}
   - component: {fileID: 1590065001012601226}
   - component: {fileID: 8434212670091508059}
+  - component: {fileID: 9188179108558760139}
   m_Layer: 0
   m_Name: Waiting
   m_TagString: Untagged
@@ -13871,7 +14063,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6774147817269814010}
   m_Father: {fileID: 480722433681028395}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13899,7 +14092,8 @@ MonoBehaviour:
   Blocks:
   - {fileID: 8434212670091508059}
   Choices: []
-  EventChoices: []
+  EventChoices:
+  - {fileID: 8044084035620892935}
   FinalText: 
   FinalChoices: []
   FinalEventChoices: []
@@ -13910,7 +14104,8 @@ MonoBehaviour:
   Commands: []
   CommandRanges: []
   Changes: []
-  Effects: []
+  Effects:
+  - {fileID: 9188179108558760139}
 --- !u!114 &8434212670091508059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13925,6 +14120,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: Waiting for your take-off command,*D10* Captain!
   Req: {fileID: 0}
+--- !u!114 &9188179108558760139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3636137514822602694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d0697c09da280458f5fe55170f6094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 0
+  TakeOff: 1
 --- !u!1 &3705084818796659885
 GameObject:
   m_ObjectHideFlags: 0
@@ -14255,6 +14464,7 @@ Transform:
   - {fileID: 2844681087365528096}
   - {fileID: 6103357837012229833}
   - {fileID: 5540363542099271320}
+  - {fileID: 7957934511743242525}
   m_Father: {fileID: 1654986204155443785}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14586,88 +14796,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: The planet air is generally toxic and the radiation level is also very
     unstable.
-  Req: {fileID: 0}
---- !u!1 &3962323055215058220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8823072635492919276}
-  - component: {fileID: 7734111131608085283}
-  - component: {fileID: 2931577510235682248}
-  m_Layer: 0
-  m_Name: --Land
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8823072635492919276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962323055215058220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 819472895101365504}
-  m_RootOrder: 31
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7734111131608085283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962323055215058220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: 
-  NextUnit: {fileID: 1582576817895720261}
-  NextUnitReq: {fileID: 0}
-  UType: 1
-  AddDelay: 2
-  AddReadDelay: 0.01
-  AutoNext: 1
-  EventMode: 0
-  AlterFont: 0
-  Blocks:
-  - {fileID: 2931577510235682248}
-  Choices: []
-  EventChoices: []
-  FinalText: 
-  FinalChoices: []
-  FinalEventChoices: []
-  Loading: 0
-  LoadIndex: 0
-  RealIndex: 0
-  CurrentDelay: 0
-  Commands: []
-  CommandRanges: []
-  Changes: []
-  Effects: []
---- !u!114 &2931577510235682248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962323055215058220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Content: DV00,*D10* prepare to land.
   Req: {fileID: 0}
 --- !u!1 &3964467984078392063
 GameObject:
@@ -15973,6 +16101,104 @@ MonoBehaviour:
   Content: '...I believe that the air on this planet might be a little bit...*D10*difficult
     to tolerate for you,*D10* Captain.'
   Req: {fileID: 0}
+--- !u!1 &4683972045327013232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2649800916922888355}
+  - component: {fileID: 5586945036798915644}
+  - component: {fileID: 8148738278886170787}
+  - component: {fileID: 8910356262336875667}
+  m_Layer: 0
+  m_Name: '[Land]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2649800916922888355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683972045327013232}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 819472895101365504}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5586945036798915644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683972045327013232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 4017948329106165329}
+  NextUnitReq: {fileID: 0}
+  UType: 0
+  AddDelay: 1.7
+  AddReadDelay: 6
+  AutoNext: 1
+  EventMode: 0
+  AlterFont: 0
+  Blocks:
+  - {fileID: 8148738278886170787}
+  Choices: []
+  EventChoices: []
+  FinalText: 
+  FinalChoices: []
+  FinalEventChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+  Effects:
+  - {fileID: 8910356262336875667}
+--- !u!114 &8148738278886170787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683972045327013232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: 
+  Req: {fileID: 0}
+--- !u!114 &8910356262336875667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4683972045327013232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a60b5dd2cbd8249afcf346bc646297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 1
+  TakeOff: 0
 --- !u!1 &4699950770625104045
 GameObject:
   m_ObjectHideFlags: 0
@@ -17672,6 +17898,52 @@ MonoBehaviour:
   Content: '...it could send & receive signals across solar systems to detect planet
     which contains life forms.'
   Req: {fileID: 0}
+--- !u!1 &5390298464374403757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6774147817269814010}
+  - component: {fileID: 8044084035620892935}
+  m_Layer: 0
+  m_Name: TakeOff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6774147817269814010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390298464374403757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5540363542099271320}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8044084035620892935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390298464374403757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8baf3045d71414badcc311ae3a34ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetUnit: {fileID: 3968630249381406560}
+  Req: {fileID: 0}
+  Key: Launch
 --- !u!1 &5438298556381959492
 GameObject:
   m_ObjectHideFlags: 0
@@ -17896,9 +18168,9 @@ Transform:
   - {fileID: 1824934188167329634}
   - {fileID: 7997995281288376187}
   - {fileID: 6989537911313611356}
-  - {fileID: 8823072635492919276}
-  - {fileID: 7437863443366344210}
-  - {fileID: 6496257611060520553}
+  - {fileID: 7281092233980097804}
+  - {fileID: 7079387383193042370}
+  - {fileID: 2649800916922888355}
   - {fileID: 1470653782247577459}
   - {fileID: 8528963833478464439}
   - {fileID: 6127271431605980336}
@@ -20245,6 +20517,104 @@ MonoBehaviour:
   Target: 
   TargetUnit: {fileID: 551155070867171789}
   Req: {fileID: 0}
+--- !u!1 &6573969271948609922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205642519686693734}
+  - component: {fileID: 6972341817791264498}
+  - component: {fileID: 8941604441315314250}
+  - component: {fileID: 3156934675497695217}
+  m_Layer: 0
+  m_Name: '[TakeOff]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205642519686693734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573969271948609922}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1462012531431047891}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6972341817791264498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573969271948609922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 8874209485818126725}
+  NextUnitReq: {fileID: 0}
+  UType: 0
+  AddDelay: 1.7
+  AddReadDelay: 6
+  AutoNext: 1
+  EventMode: 0
+  AlterFont: 0
+  Blocks:
+  - {fileID: 8941604441315314250}
+  Choices: []
+  EventChoices: []
+  FinalText: 
+  FinalChoices: []
+  FinalEventChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+  Effects:
+  - {fileID: 3156934675497695217}
+--- !u!114 &8941604441315314250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573969271948609922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: 
+  Req: {fileID: 0}
+--- !u!114 &3156934675497695217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573969271948609922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a60b5dd2cbd8249afcf346bc646297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 0
+  TakeOff: 1
 --- !u!1 &6625201540966422884
 GameObject:
   m_ObjectHideFlags: 0
@@ -22038,6 +22408,7 @@ GameObject:
   - component: {fileID: 1759758433472966781}
   - component: {fileID: 5116593279186876953}
   - component: {fileID: 5039172332947245265}
+  - component: {fileID: 479346826031397997}
   m_Layer: 0
   m_Name: FuelAndFool (2)
   m_TagString: Untagged
@@ -22055,7 +22426,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8919185127634913617}
   m_Father: {fileID: 1462012531431047891}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22083,7 +22455,8 @@ MonoBehaviour:
   Blocks:
   - {fileID: 5039172332947245265}
   Choices: []
-  EventChoices: []
+  EventChoices:
+  - {fileID: 4967528667728339803}
   FinalText: 
   FinalChoices: []
   FinalEventChoices: []
@@ -22094,7 +22467,8 @@ MonoBehaviour:
   Commands: []
   CommandRanges: []
   Changes: []
-  Effects: []
+  Effects:
+  - {fileID: 479346826031397997}
 --- !u!114 &5039172332947245265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22109,6 +22483,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: 'The atmosphere here does not stay stable for long. '
   Req: {fileID: 0}
+--- !u!114 &479346826031397997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7625264607663024570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d0697c09da280458f5fe55170f6094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 0
+  TakeOff: 1
 --- !u!1 &7660489587222335404
 GameObject:
   m_ObjectHideFlags: 0
@@ -22879,6 +23267,7 @@ GameObject:
   - component: {fileID: 318505914987327334}
   - component: {fileID: 5121847162858076062}
   - component: {fileID: 5131696843161514376}
+  - component: {fileID: 7062606430905074133}
   m_Layer: 0
   m_Name: TakeOff
   m_TagString: Untagged
@@ -22896,7 +23285,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 649902037232977742}
   m_Father: {fileID: 7943073768954863022}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22924,7 +23314,8 @@ MonoBehaviour:
   Blocks:
   - {fileID: 5131696843161514376}
   Choices: []
-  EventChoices: []
+  EventChoices:
+  - {fileID: 3222963678689022154}
   FinalText: 
   FinalChoices: []
   FinalEventChoices: []
@@ -22935,7 +23326,8 @@ MonoBehaviour:
   Commands: []
   CommandRanges: []
   Changes: []
-  Effects: []
+  Effects:
+  - {fileID: 7062606430905074133}
 --- !u!114 &5131696843161514376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22950,6 +23342,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Content: Ready to take off,*D10* Captain.
   Req: {fileID: 0}
+--- !u!114 &7062606430905074133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106718583745400847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d0697c09da280458f5fe55170f6094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 0
+  TakeOff: 1
+--- !u!1 &8112235849144795258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8919185127634913617}
+  - component: {fileID: 4967528667728339803}
+  m_Layer: 0
+  m_Name: BackInSpace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8919185127634913617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112235849144795258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1759758433472966781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4967528667728339803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112235849144795258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8baf3045d71414badcc311ae3a34ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetUnit: {fileID: 6972341817791264498}
+  Req: {fileID: 0}
+  Key: Launch
 --- !u!1 &8120337564256241633
 GameObject:
   m_ObjectHideFlags: 0
@@ -23239,7 +23691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8baf3045d71414badcc311ae3a34ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetUnit: {fileID: 7734111131608085283}
+  TargetUnit: {fileID: 2166368316124048825}
   Req: {fileID: 0}
   Key: Landing
 --- !u!1 &8197722605335665027
@@ -23653,9 +24105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Content: 'In the meantime,*D10* Captain,*D25* feel free to check the inventory and
-    do some research on Neptune 4 samples. Or talk to me if you wish, a simple tap
-    on my screen can wake me up. '
+  Content: In the meantime,*D10* Captain,*D25* feel free to check the inventory and
+    do some research on Neptune 4 samples.
   Req: {fileID: 0}
 --- !u!1 &8349218920719444759
 GameObject:
@@ -23822,6 +24273,88 @@ MonoBehaviour:
   Content: In recent years,*D30* while the Council are pushing terraforming policy
     throughout colonies...
   Req: {fileID: 0}
+--- !u!1 &8384488795558644469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7079387383193042370}
+  - component: {fileID: 3740525446935110457}
+  - component: {fileID: 8327044478773923083}
+  m_Layer: 0
+  m_Name: Land
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7079387383193042370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8384488795558644469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 819472895101365504}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3740525446935110457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8384488795558644469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 5586945036798915644}
+  NextUnitReq: {fileID: 0}
+  UType: 0
+  AddDelay: 1
+  AddReadDelay: 0
+  AutoNext: 1
+  EventMode: 0
+  AlterFont: 0
+  Blocks:
+  - {fileID: 8327044478773923083}
+  Choices: []
+  EventChoices: []
+  FinalText: 
+  FinalChoices: []
+  FinalEventChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+  Effects: []
+--- !u!114 &8327044478773923083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8384488795558644469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: Understood,*D10* Captain.*D50* Initializing landing procedure...
+  Req: {fileID: 0}
 --- !u!1 &8442997059169694317
 GameObject:
   m_ObjectHideFlags: 0
@@ -23972,6 +24505,7 @@ Transform:
   - {fileID: 7028791942293422800}
   - {fileID: 726274961586338666}
   - {fileID: 318505914987327334}
+  - {fileID: 2531729841766096923}
   m_Father: {fileID: 1654986204155443785}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24635,6 +25169,104 @@ MonoBehaviour:
   Content: '...scientist in USEA strongly advise against the notion for they discovered
     a surprising, and maybe terrifying fact...'
   Req: {fileID: 0}
+--- !u!1 &8717315163347345508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2531729841766096923}
+  - component: {fileID: 3824903981017300449}
+  - component: {fileID: 7458471790657850816}
+  - component: {fileID: 2496808370183433275}
+  m_Layer: 0
+  m_Name: '[TakeOff]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2531729841766096923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717315163347345508}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7943073768954863022}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3824903981017300449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717315163347345508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: 
+  NextUnit: {fileID: 1056451211360870994}
+  NextUnitReq: {fileID: 0}
+  UType: 0
+  AddDelay: 1.7
+  AddReadDelay: 6
+  AutoNext: 1
+  EventMode: 0
+  AlterFont: 0
+  Blocks:
+  - {fileID: 7458471790657850816}
+  Choices: []
+  EventChoices: []
+  FinalText: 
+  FinalChoices: []
+  FinalEventChoices: []
+  Loading: 0
+  LoadIndex: 0
+  RealIndex: 0
+  CurrentDelay: 0
+  Commands: []
+  CommandRanges: []
+  Changes: []
+  Effects:
+  - {fileID: 2496808370183433275}
+--- !u!114 &7458471790657850816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717315163347345508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Content: 
+  Req: {fileID: 0}
+--- !u!114 &2496808370183433275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717315163347345508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a60b5dd2cbd8249afcf346bc646297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Land: 0
+  TakeOff: 1
 --- !u!1 &8722839340462916764
 GameObject:
   m_ObjectHideFlags: 0
@@ -24810,104 +25442,6 @@ MonoBehaviour:
   Target: 
   TargetUnit: {fileID: 0}
   Req: {fileID: 0}
---- !u!1 &8873418081541660663
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6496257611060520553}
-  - component: {fileID: 3674730772080118693}
-  - component: {fileID: 824327452663412122}
-  - component: {fileID: 3065882582340079712}
-  m_Layer: 0
-  m_Name: '[Land]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6496257611060520553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8873418081541660663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 819472895101365504}
-  m_RootOrder: 33
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3674730772080118693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8873418081541660663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc1acbff93caf884ba84bfbc8d584f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Key: 
-  NextUnit: {fileID: 4017948329106165329}
-  NextUnitReq: {fileID: 0}
-  UType: 0
-  AddDelay: 1.7
-  AddReadDelay: 6
-  AutoNext: 1
-  EventMode: 0
-  AlterFont: 0
-  Blocks:
-  - {fileID: 824327452663412122}
-  Choices: []
-  EventChoices: []
-  FinalText: 
-  FinalChoices: []
-  FinalEventChoices: []
-  Loading: 0
-  LoadIndex: 0
-  RealIndex: 0
-  CurrentDelay: 0
-  Commands: []
-  CommandRanges: []
-  Changes: []
-  Effects:
-  - {fileID: 3065882582340079712}
---- !u!114 &824327452663412122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8873418081541660663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ddb53ce5f07d949bac21da9280b29f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Content: 
-  Req: {fileID: 0}
---- !u!114 &3065882582340079712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8873418081541660663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bd7973e10242b741a3833452dbca9c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Anim: {fileID: 0}
-  Key: Land
 --- !u!1 &8878107935579721045
 GameObject:
   m_ObjectHideFlags: 0

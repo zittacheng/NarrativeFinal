@@ -9,5 +9,9 @@ public class UnitEffect_ControlRod : UnitEffect {
     public override void Effect()
     {
         base.Effect();
+        if (Land)
+            LaunchButtonController.EnableLanding = true;
+        else if (TakeOff)
+            LaunchButtonController.EnableLaunch = true;
     }
 }
