@@ -60,6 +60,7 @@ public class MapDotController : MonoBehaviour
         {
 
             MapController.CurrentSelectLocationCode = MapDotCode;
+            animator.SetTrigger("Click");
             animator.SetBool("Select", true);
 
             //selected = true;
@@ -72,7 +73,9 @@ public class MapDotController : MonoBehaviour
 
         else if (MapController.CurrentSelectLocationCode == MapDotCode && MapController.CurrentLocationCode != MapDotCode)
         {
+            animator.SetTrigger("Click");
             animator.SetBool("Select", false);
+
             PlanetNameDisplay.text = " ";
             //selected = false;
             MapController.CurrentSelectLocationCode = 0;
