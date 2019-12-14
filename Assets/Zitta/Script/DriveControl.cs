@@ -10,6 +10,11 @@ public class DriveControl : MonoBehaviour {
     public List<BackgroundControl> Planets;
     public int NextPlanet;
 
+    public void Awake()
+    {
+        Main = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
