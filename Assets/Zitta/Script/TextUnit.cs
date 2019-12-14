@@ -27,6 +27,7 @@ public class TextUnit : MonoBehaviour {
     [HideInInspector] public List<string> Commands;
     [HideInInspector] public List<Vector2Int> CommandRanges;
     [Space]
+    public List<NextUnitOverride> Overrides;
     public List<VariableChange> Changes;
     public List<UnitEffect> Effects;
 
@@ -82,6 +83,10 @@ public class TextUnit : MonoBehaviour {
         IndexCheck();
         foreach (UnitEffect UE in Effects)
             UE.Effect();
+        foreach (NextUnitOverride NUO in Overrides)
+            if (NUO.Active())
+                NextUnit = NUO.GetUnit();
+
     }
 
     public void CommandCheck()
@@ -164,6 +169,30 @@ public class TextUnit : MonoBehaviour {
         return TempText;
     }
 
+    public string GetFinalText()
+    {
+        int a = -1;
+        for (int i = CommandRanges.Count - 1; i >= 0; i--)
+        {
+            if (Commands[i] == "n")
+                continue;
+            a = i;
+            break;
+        }
+        string TempText = FinalText;
+        if (a >= 0)
+        {
+            for (int i = a; i >= 0; i--)
+            {
+                if (Commands[i] == "n")
+                    continue;
+                TempText = TempText.Substring(0, CommandRanges[i].x) + TempText.Substring(CommandRanges[i].y + 1);
+            }
+        }
+        TempText = TempText.Replace(oldValue: "*n*", newValue: "\n");
+        return TempText;
+    }
+
     public void OnEnd()
     {
         foreach (UnitEffect UE in Effects)
@@ -214,6 +243,20 @@ public class TextUnit : MonoBehaviour {
         EventChoices = new List<EventChoice>();
         foreach (EventChoice EC in GetComponentsInChildren<EventChoice>())
             EventChoices.Add(EC);
+        Overrides = new List<NextUnitOverride>();
+        foreach (NextUnitOverride NUO in GetComponentsInChildren<NextUnitOverride>())
+            Overrides.Add(NUO);
+    }
+
+    public void EditorNextUnit()
+    {
+        List<TextUnit> TU = new List<TextUnit>();
+        foreach (TextUnit T in transform.parent.GetComponentsInChildren<TextUnit>())
+            TU.Add(T);
+        int i = TU.IndexOf(this);
+        if (i < 0 || i == TU.Count - 1)
+            return;
+        NextUnit = TU[i + 1];
     }
 
     public TextUnit GetNextUnit()
