@@ -49,7 +49,7 @@ public class ItemController : MonoBehaviour
         //ItemCode = InventorySelectControl.ItemCode;
 
         spriteRenderer.sprite = ItemImage[ItemCode];
-        if (ItemCode == 3)
+        if (ItemCode == 3|| ItemCode == 10 || ItemCode == 11 || ItemCode == 12 || ItemCode == 13 || ItemCode == 14 || ItemCode == 15 || ItemCode == 16)
         {
             AudioLog = true;
         }
@@ -162,6 +162,7 @@ public class ItemController : MonoBehaviour
             InventorySelectControl.ItemCode = 0;
             inventoryDoor.SetBool("Dump", false);
             inventoryDoor.SetBool("Open", false);
+            TextControl.Main.Event("Trash",ItemCode);
             // InventoryDoorController.
             Destroy(gameObject);
             //trigger trashdoor animation
@@ -215,6 +216,7 @@ public class ItemController : MonoBehaviour
             trashDoor.SetBool("Dump", false);
             inventoryDoor.SetBool("Dump", false);
             inventoryDoor.SetBool("Open", false);
+            TextControl.Main.Event("AudioLog",ItemCode);
             Debug.Log("AudioLog in the reader");
             Destroy(gameObject);
         }

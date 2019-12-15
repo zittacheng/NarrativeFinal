@@ -57,10 +57,24 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a6ca1ff0844527d4b9671e690cfe0b9b, type: 3}
   - {fileID: 26983926538926579, guid: 7776a69013452a44e90cab36af3b0b5c, type: 3}
   - {fileID: 4565152561491793471, guid: 0223874f06776cd4195f2196b96ff889, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 326f2593b74c01b499b2e94fe6614c92, type: 3}
+  - {fileID: 21300000, guid: 89bd217b3c28b2d43b2a6929561e9b5b, type: 3}
+  - {fileID: 6545323292526541858, guid: 10b54142b091a714b85e24536d5c7b90, type: 3}
+  - {fileID: 21300000, guid: 01b928ed95e2bb14c8c9f49748407e52, type: 3}
+  - {fileID: -8687070582755634357, guid: ebffdd94b1af06b4a955256bd57c4856, type: 3}
+  - {fileID: 4565152561491793471, guid: 0223874f06776cd4195f2196b96ff889, type: 3}
   ItemCode: 0
   targetObject: 
   FromInventory: 0
   FromResearchStation: 0
+  FromAudioReader: 0
+  AudioLog: 0
 --- !u!212 &8933643184035805090
 SpriteRenderer:
   m_ObjectHideFlags: 0

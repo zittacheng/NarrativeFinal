@@ -28,6 +28,7 @@ public class AudioLogReaderController : MonoBehaviour
             if (targetTime <= 0.0f)
             {
                 animator.SetBool("Insert",false);
+                InventorySelectControl.ifResearched[ItemCode] = true;
                 reading = false;
                 targetTime = 5.0f;
             }

@@ -6,17 +6,27 @@ using TMPro;
 public class InventorySelectControl : MonoBehaviour
 {
     [HideInInspector]public static int OtherSelectedBox = 0;
-    private GameObject InventoryDetail;
+    public GameObject InventoryDetail;
     public static int ItemCode = 0;
     public TextMeshPro descriptionText;
-    public string[] ItemDescription;
+    public TextMeshPro PlanetName;
+    [TextArea]public string[] itemDescriptionBeforeResearch;
+    [TextArea]public string[] itemName;
+    [TextArea]public string[] ItemDescription;
+    [HideInInspector]public static bool[] ifResearched;
+    [HideInInspector]public static int PageCount = 0;
+    [HideInInspector]public static int CurrentPage = 1;
+    [HideInInspector] public static int itemCount = 0;
     private int[ ,] itemList;
     private int[] itemObtained = new int[9];
     public GameObject prefabSelectBox;
     public GameObject parent;
     private string GameObjectName;
+    public TextMeshPro pageDisplay;
     [HideInInspector]public static bool deleteAllBoxes = false;
     public static bool ReadyToInstantiate = true;
+    public GameObject inventoryInterface;
+    public TextMeshPro ButtonText;
    // [HideInInspector]public static int CurrentItemCode = 0;
     //public string Item2;
 
@@ -25,7 +35,7 @@ public class InventorySelectControl : MonoBehaviour
     {
         itemList = new int[3,3];
 
-        InventoryDetail = GameObject.Find("inventory detail");
+        //InventoryDetail = GameObject.Find("inventory detail");
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j< 3; j++)
@@ -39,14 +49,30 @@ public class InventorySelectControl : MonoBehaviour
         }
         //itemList[0,0] = 2;
         //itemList[1,0] = 3;
-       // itemList[2, 0] = 4;
+        // itemList[2, 0] = 4;
+        ifResearched = new bool[itemName.Length];
+        for (int i = 0; i < itemName.Length; i++)
+        {
+            ifResearched[i] = false;
+        }
     }
 
     void Start()
     {
-        AddItem(1);
-        AddItem(2);
+       // AddItem(1);
+       // AddItem(2);
         AddItem(3);
+        AddItem(4);
+        // AddItem(5);
+        // AddItem(6);
+        // AddItem(7);
+        // AddItem(8); 
+        //AddItem(9);
+        AddItem(10);
+        AddItem(17);
+        AddItem(20);
+        AddItem(18);
+        AddItem(19);
     }
 
     void OnEnable()
@@ -57,6 +83,7 @@ public class InventorySelectControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(ItemCode);
         //if (ItemCode == 1)
         // {
         //     descriptionText.text = Item1;
@@ -66,12 +93,32 @@ public class InventorySelectControl : MonoBehaviour
         // descriptionText.text = Item2;
         // }
         Refresh2DArray();
-        descriptionText.text = ItemDescription[ItemCode];
-        if (ItemCode == 0)
+
+        if (ItemCode == 4||ItemCode == 17)
+        {
+            ButtonText.text = "upgrade";
+        }
+        else
+        {
+            ButtonText.text = "take out";
+        }
+
+        if (ifResearched[ItemCode] == false)
+        {
+            descriptionText.text = itemDescriptionBeforeResearch[ItemCode];
+        }
+        else if (ifResearched[ItemCode] == true) {
+            descriptionText.text = ItemDescription[ItemCode];
+        }
+
+        PlanetName.text = itemName[ItemCode];
+        if (ItemCode == 0 )
         {
             InventoryDetail.SetActive(false);
         }
-        else InventoryDetail.SetActive(true);
+        else {
+            InventoryDetail.SetActive(true);
+        }
         //if (OtherSelectedBox>0)
         // {
         //  InventoryDetail.SetActive(true);
@@ -80,7 +127,15 @@ public class InventorySelectControl : MonoBehaviour
         // {
         //   InventoryDetail.SetActive(false);
         // }
-    }
+      //  if (InventoryDetail.activeSelf == true)
+      //  {
+        descriptionText.pageToDisplay = CurrentPage;
+        PageCount = descriptionText.textInfo.pageCount;
+
+        pageDisplay.text = CurrentPage + "/" + PageCount;
+ //   }
+        }
+        
 
   
     public void InstantiateAllBoxes()
@@ -131,6 +186,7 @@ public class InventorySelectControl : MonoBehaviour
         }
         Debug.Log("add new item" + ThisItemCode);
         Refresh2DArray();
+        itemCount++;
     }
     public void DeleteItem(int ThisItemCodeA)
     {
@@ -153,6 +209,7 @@ public class InventorySelectControl : MonoBehaviour
 
         }
         Refresh2DArray();
+        itemCount--;
     }
 
 

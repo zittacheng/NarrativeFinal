@@ -18,7 +18,7 @@ public class ResearchButtonController : MonoBehaviour
     private Animator ItemOnPlate;
     public static bool hasItem = false;
     private Animator ResearchPanel;
-    private float targetTime = 12.0f;
+    private float targetTime = 10.0f;
 
     //private bool ifCollideWithMouse = false;
     void Start()
@@ -47,8 +47,9 @@ public class ResearchButtonController : MonoBehaviour
             if (targetTime <= 0.0f)
             {
                 ResearchPanel.SetBool("Research",false);
+                InventorySelectControl.ifResearched[ItemOnPlate.GetInteger("ItemCode")] = true;
                 ItemOnPlate.SetTrigger("Click");
-                targetTime = 12.0f;
+                targetTime = 10.0f;
                 
 
             }
@@ -118,4 +119,6 @@ public class ResearchButtonController : MonoBehaviour
         //spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1);
         Debug.Log("mouse up");
     }
+
+    
 }

@@ -113,7 +113,7 @@ public class InventoryDoorController : MonoBehaviour
 
         Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pz.z = 0;
-        if (ItemCode != 0 && ItemCode !=4)
+        if (ItemCode != 0 && ItemCode !=4 && ItemCode != SampleOnPlateController.CurrentItemOnPlateCode)
         {
         var a = Instantiate(prefab, pz, Quaternion.identity);
             a.GetComponent<ItemController>().FromInventory= true;

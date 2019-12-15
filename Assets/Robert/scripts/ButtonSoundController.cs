@@ -21,14 +21,24 @@ public class ButtonSoundController : MonoBehaviour
 
     public void PlaySound()
     {
+        if(audio1.isPlaying == false)
+        {
         audio1.PlayOneShot(ButtonSound);
+        }
+        
         Debug.Log("play sound");
         Debug.Log(gameObject);
     }
 
     public void PlaySound2()
     {
+        
         audio1.PlayOneShot(SecondClip);
        // Debug.Log();
+    }
+
+    public void SoundEnd()
+    {
+        audio1.Stop();
     }
 }

@@ -48,9 +48,21 @@ public class InventoryDetailButton : MonoBehaviour
     }
     void AfterSelect()
     {
+        if (InventorySelectControl.ItemCode == 4||InventorySelectControl.ItemCode == 17)
+        {
+            
+            TextControl.Main.Event("Upgrade", InventorySelectControl.ItemCode);
+            Debug.Log("Upgrade");
+            GameObject.Find("InventoryItemBoxes").GetComponent<InventorySelectControl>().DeleteItem(InventorySelectControl.ItemCode);
+            InventoryButton.SetTrigger("Click");
+        }
+        else
+        {
         InventoryButton.SetTrigger("Click");
         InventoryDoor.SetBool("Open", true);
         InventoryDoorController.hasItem = true;
+        }
+        
         //spawn inventory item there
     }
 }

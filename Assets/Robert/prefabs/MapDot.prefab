@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2257704179433264072}
   - component: {fileID: 7002812639954750152}
-  - component: {fileID: 7043008624815948395}
   - component: {fileID: 8535741434963580816}
   - component: {fileID: 5979736692065825656}
-  - component: {fileID: 864122057423582515}
   - component: {fileID: 2841425421469879246}
+  - component: {fileID: 3811697286224755426}
+  - component: {fileID: 7202865478265570327}
   m_Layer: 0
   m_Name: MapDot
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 9203993627428760113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.87, y: -1.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7043008624815948395
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9203993627428760113}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.009162605, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.33083743
 --- !u!114 &8535741434963580816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +121,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &864122057423582515
+--- !u!114 &2841425421469879246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203993627428760113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b0ef56eb28b4f42bf67a68928bfaa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 8300000, guid: 45e49b4f71f276f488bbcbbdf4c0c39f, type: 3}
+  SecondClip: {fileID: 0}
+--- !u!58 &3811697286224755426
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9203993627428760113}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.33999997
+--- !u!82 &7202865478265570327
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,17 +247,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2841425421469879246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9203993627428760113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38b0ef56eb28b4f42bf67a68928bfaa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ButtonSound: {fileID: 8300000, guid: 45e49b4f71f276f488bbcbbdf4c0c39f, type: 3}
-  SecondClip: {fileID: 0}

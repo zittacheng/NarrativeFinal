@@ -33,7 +33,7 @@ public class ItemBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InventoryDetail = GameObject.Find("inventory detail");
+      
         //ItemCode = InventorySelectControl.CurrentItemCode;
         
         
@@ -42,9 +42,13 @@ public class ItemBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        InventoryDetail = GameObject.Find("inventory detail");
         AnimationOfSample.SetInteger("ItemCode",ItemCode);
-        spriteRenderer.sprite = SampleImage[ItemCode];
+        if (ItemCode == 3 || ItemCode == 10 || ItemCode == 11|| ItemCode == 12 || ItemCode == 13 || ItemCode == 14||ItemCode == 15||ItemCode == 16)
+        {
+            AnimationOfSample.SetBool("AudioLog", true);
+        }
+        //spriteRenderer.sprite = SampleImage[ItemCode];
         
         //animationOfSample.Play("Item"+ItemCode.ToString()+"Analysis");
         //animationOfSample.clip = animationClip[ItemCode];
@@ -102,11 +106,13 @@ public class ItemBox : MonoBehaviour
         {
 
             InventorySelectControl.ItemCode = ItemCode;
+            InventorySelectControl.CurrentPage = 1;
             animator.SetBool("selected", true);
             //selected = true;
             //InventorySelectControl.OtherSelectedBox++;
-            InventoryDetail.SetActive(true);
-
+            //if (InventoryDetail.activeSelf == false) {
+             //   InventoryDetail.SetActive(true);
+          //  }
 
             //deselect other boxes;
         }
@@ -116,6 +122,7 @@ public class ItemBox : MonoBehaviour
             animator.SetBool("selected", false);
             //selected = false;
             InventorySelectControl.ItemCode = 0;
+            InventorySelectControl.CurrentPage = 1;
             InventoryDetail.SetActive(false);
             //InventorySelectControl.OtherSelectedBox--;
         }
