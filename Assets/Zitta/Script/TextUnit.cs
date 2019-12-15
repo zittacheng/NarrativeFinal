@@ -84,8 +84,13 @@ public class TextUnit : MonoBehaviour {
         foreach (UnitEffect UE in Effects)
             UE.Effect();
         foreach (NextUnitOverride NUO in Overrides)
+        {
             if (NUO.Active())
+            {
                 NextUnit = NUO.GetUnit();
+                break;
+            }
+        }
 
     }
 

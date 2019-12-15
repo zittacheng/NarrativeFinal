@@ -42,4 +42,9 @@ public class BackgroundControl : MonoBehaviour {
         yield return new WaitForSeconds(TakeOffDelay);
         DriveControl.Main.JumpOff();
     }
+
+    public void AnimatorEvent(string Key)
+    {
+        BGAnim.SetTrigger(Key);
+    }
 }

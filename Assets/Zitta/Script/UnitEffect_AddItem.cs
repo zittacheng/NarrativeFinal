@@ -9,5 +9,6 @@ public class UnitEffect_AddItem : UnitEffect {
     {
         base.Effect();
         FindObjectOfType<InventorySelectControl>().AddItem(Value);
+        SaveControl.SetInt("Item" + Value, 1);
     }
 }
