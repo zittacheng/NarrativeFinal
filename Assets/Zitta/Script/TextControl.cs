@@ -20,6 +20,12 @@ public class TextControl : MonoBehaviour {
     public float DefaultDelay;
     public float ReadDelay;
     [Space]
+    public TextRenderer MainRenderer;
+    public List<TextRenderer> Renderers;
+    [Space]
+    public GameObject LowerBase;
+    public List<float> LowerBasePositions;
+    [Space]
     public Animator ChoiceBarAnim;
     public Animator PlayerAnim;
     public Animator AIAnim;
@@ -87,6 +93,9 @@ public class TextControl : MonoBehaviour {
                 ChoiceBases[i].SetActive(i == a - 1);
             }
         }
+
+        LowerBase.transform.localPosition = 
+            new Vector3(LowerBase.transform.localPosition.x, LowerBasePositions[MainRenderer.GetLineCount()], LowerBase.transform.localPosition.z);
     }
 
     public void LoadUnit(TextUnit TU)
@@ -111,6 +120,9 @@ public class TextControl : MonoBehaviour {
             AIUnit = TU;
             PlayerUnit = null;
         }
+
+        foreach (TextRenderer TR in Renderers)
+            TR.Update();
     }
 
     public TextUnit GetUnit(string Key)
@@ -162,6 +174,13 @@ public class TextControl : MonoBehaviour {
         return TU.GetText();
     }
 
+    public string GetFinalText(UnitType TargetType)
+    {
+        if (!GetCurrentUnit() || !GetUnit(TargetType))
+            return "";
+        return GetUnit(TargetType).GetFinalText();
+    }
+
     public bool HaveChoice()
     {
         return ChoiceActive;
@@ -198,6 +217,11 @@ public class TextControl : MonoBehaviour {
 
     public void Event(string Key, int Value)
     {
+        print(Key);
+        if (Key == "Select")
+            DriveControl.Main.SetNextPlanet(Value);
+        if ((Key == "Upgrade" || Key == "Trash") && GetCurrentUnit() && GetCurrentUnit().GetEventChoice(Key + Value))
+            ChooseEventChoice(GetCurrentUnit().GetEventChoice(Key + Value));
         if (GetCurrentUnit() && GetCurrentUnit().GetEventChoice(Key))
             ChooseEventChoice(GetCurrentUnit().GetEventChoice(Key));
     }

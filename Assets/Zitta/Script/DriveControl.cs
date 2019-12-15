@@ -39,6 +39,22 @@ public class DriveControl : MonoBehaviour {
         BGC.TakeOff();
     }
 
+    public void AnimatorEvent(string Key)
+    {
+        BackgroundControl BGC = Planets[NextPlanet];
+        BGC.AnimatorEvent(Key);
+    }
+
+    public void Arrive()
+    {
+        JumpAnim.SetTrigger("Arrive");
+    }
+
+    public void Depart()
+    {
+        JumpAnim.SetTrigger("Depart");
+    }
+
     public void SetNextPlanet(int NextIndex)
     {
         NextPlanet = NextIndex;

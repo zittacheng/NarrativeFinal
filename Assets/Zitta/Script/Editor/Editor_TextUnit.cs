@@ -15,6 +15,13 @@ public class Editor_TextUnit : Editor {
         {
             Undo.RecordObject(TU, "Assign");
             TU.EditorAssign();
+            PrefabUtility.RecordPrefabInstancePropertyModifications(TU);
+        }
+        if (GUILayout.Button("NextUnit"))
+        {
+            Undo.RecordObject(TU, "NextUnit");
+            TU.EditorNextUnit();
+            PrefabUtility.RecordPrefabInstancePropertyModifications(TU);
         }
     }
 }

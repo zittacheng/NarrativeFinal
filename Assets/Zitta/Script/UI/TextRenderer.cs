@@ -6,6 +6,7 @@ using TMPro;
 public class TextRenderer : MonoBehaviour {
     public TextMeshProUGUI TEXT;
     public TextMeshProUGUI AlterTEXT;
+    public TextMeshProUGUI TestTEXT;
     public UnitType TargetType;
 
     // Start is called before the first frame update
@@ -15,8 +16,9 @@ public class TextRenderer : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+        TestTEXT.text = TextControl.Main.GetFinalText(TargetType);
         string s = TextControl.Main.GetText(TargetType, out bool Alter);
         if (Alter)
         {
@@ -34,5 +36,10 @@ public class TextRenderer : MonoBehaviour {
                 TEXT.text = s;
             AlterTEXT.text = "";
         }
+    }
+
+    public int GetLineCount()
+    {
+        return TestTEXT.textInfo.lineCount;
     }
 }
