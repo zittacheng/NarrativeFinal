@@ -220,6 +220,8 @@ public class TextControl : MonoBehaviour {
         print(Key);
         if (Key == "Select")
             DriveControl.Main.SetNextPlanet(Value);
+        if ((Key == "Upgrade" || Key == "Trash") && GetCurrentUnit() && GetCurrentUnit().GetEventChoice(Key + Value))
+            ChooseEventChoice(GetCurrentUnit().GetEventChoice(Key + Value));
         if (GetCurrentUnit() && GetCurrentUnit().GetEventChoice(Key))
             ChooseEventChoice(GetCurrentUnit().GetEventChoice(Key));
     }
