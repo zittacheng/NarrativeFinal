@@ -61,18 +61,18 @@ public class InventorySelectControl : MonoBehaviour
     {
        // AddItem(1);
        // AddItem(2);
-        AddItem(3);
-        AddItem(4);
+       // AddItem(3);
+        //AddItem(4);
         // AddItem(5);
         // AddItem(6);
         // AddItem(7);
         // AddItem(8); 
         //AddItem(9);
-        AddItem(10);
-        AddItem(17);
-        AddItem(20);
-        AddItem(18);
-        AddItem(19);
+       // AddItem(10);
+       // AddItem(17);
+        //AddItem(20);
+        //AddItem(18);
+       // AddItem(19);
     }
 
     void OnEnable()

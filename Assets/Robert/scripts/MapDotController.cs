@@ -10,11 +10,15 @@ public class MapDotController : MonoBehaviour
     public string AnimationBoolName;
     public string PlanetName;
     private TextMeshPro PlanetNameDisplay;
-   // public string AnimationTriggerName;
+    public int[] ConnectPlanets;
+    public bool ifConnectWithAdjancentPlanet = false;
+    
+    // public string AnimationTriggerName;
     // Start is called before the first frame update
     void Start()
     {
         PlanetNameDisplay = GameObject.Find("PlanetName").GetComponent<TextMeshPro>();
+     //   ConfirmButton = GameObject.Find("ConfirmButton");
     }
 
     // Update is called once per frame
@@ -58,7 +62,16 @@ public class MapDotController : MonoBehaviour
         //Instantiate(prefab, pz, Quaternion.identity);
         if (MapController.CurrentSelectLocationCode!=MapDotCode && MapController.CurrentLocationCode!=MapDotCode)
         {
+            ifConnectWithAdjancentPlanet = false;
+            foreach (int a in ConnectPlanets)
+            {
+                if (a == MapController.CurrentSelectLocationCode)
+                {
+                    ifConnectWithAdjancentPlanet = true;
+                }
+            }
 
+           
             MapController.CurrentSelectLocationCode = MapDotCode;
             animator.SetTrigger("Click");
             animator.SetBool("Select", true);
@@ -75,9 +88,10 @@ public class MapDotController : MonoBehaviour
         {
             animator.SetTrigger("Click");
             animator.SetBool("Select", false);
-
+           
             PlanetNameDisplay.text = " ";
             //selected = false;
+            MapController.EnableButton = false;
             MapController.CurrentSelectLocationCode = 0;
            // InventoryDetail.SetActive(false);
             //InventorySelectControl.OtherSelectedBox--;

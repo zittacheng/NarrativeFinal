@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InventoryDoorDump
+  m_Name: DestinationConfirmButtonDefault
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,10 +20,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 3389152310162533095, guid: 8bdf39be71d553a4daed9377f52f06bc,
+      value: {fileID: 3394538558591641197, guid: c7d6dff84fcb1ed4192cbfebc3c0449e,
         type: 3}
     - time: 0.083333336
-      value: {fileID: 3389152310162533095, guid: 8bdf39be71d553a4daed9377f52f06bc,
+      value: {fileID: 3394538558591641197, guid: c7d6dff84fcb1ed4192cbfebc3c0449e,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -44,8 +44,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 3389152310162533095, guid: 8bdf39be71d553a4daed9377f52f06bc, type: 3}
-    - {fileID: 3389152310162533095, guid: 8bdf39be71d553a4daed9377f52f06bc, type: 3}
+    - {fileID: 3394538558591641197, guid: c7d6dff84fcb1ed4192cbfebc3c0449e, type: 3}
+    - {fileID: 3394538558591641197, guid: c7d6dff84fcb1ed4192cbfebc3c0449e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
